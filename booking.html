@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="احجز موعدك مع Plaza Clean - سهل وسريع وآمن">
+    <title>احجز الآن | Plaza Clean</title>
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E✨%3C/text%3E%3C/svg%3E">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a5f',
+                        secondary: '#14b8a6',
+                        accent: '#f59e0b',
+                        dark: '#0f172a',
+                    },
+                    fontFamily: {
+                        'cairo': ['Cairo', 'sans-serif'],
+                        'tajawal': ['Tajawal', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { font-family: 'Cairo', sans-serif; }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(30, 58, 95, 0.95) 0%, rgba(20, 184, 166, 0.85) 100%);
+        }
+        .pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(20, 184, 166, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(20, 184, 166, 0.8); }
+        }
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            left: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 20px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #128c7e;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .time-slot {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .time-slot.selected {
+            background-color: #14b8a6 !important;
+            color: white !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <div class="text-4xl">✨</div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-primary font-tajawal">Plaza Clean</h1>
+                        <p class="text-xs text-secondary">نخلي أماكنك تبرق</p>
+                    </div>
+                </div>
+                
+                <ul class="hidden md:flex space-x-8 space-x-reverse font-tajawal">
+                    <li><a href="index.html" class="text-gray-700 hover:text-secondary transition">الرئيسية</a></li>
+                    <li><a href="services.html" class="text-gray-700 hover:text-secondary transition">الخدمات</a></li>
+                    <li><a href="gallery.html" class="text-gray-700 hover:text-secondary transition">معرض الأعمال</a></li>
+                    <li><a href="about.html" class="text-gray-700 hover:text-secondary transition">من نحن</a></li>
+                    <li><a href="pricing.html" class="text-gray-700 hover:text-secondary transition">الأسعار</a></li>
+                    <li><a href="blog.html" class="text-gray-700 hover:text-secondary transition">المدونة</a></li>
+                    <li><a href="contact.html" class="text-gray-700 hover:text-secondary transition">اتصل بنا</a></li>
+                </ul>
+                
+                <a href="booking.html" class="hidden md:block bg-secondary hover:bg-accent text-white px-6 py-3 rounded-full font-bold transition transform hover:scale-105 pulse-glow">
+                    احجز الآن
+                </a>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-primary focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <ul class="space-y-3 font-tajawal">
+                    <li><a href="index.html" class="block text-gray-700 hover:text-secondary transition">الرئيسية</a></li>
+                    <li><a href="services.html" class="block text-gray-700 hover:text-secondary transition">الخدمات</a></li>
+                    <li><a href="gallery.html" class="block text-gray-700 hover:text-secondary transition">معرض الأعمال</a></li>
+                    <li><a href="about.html" class="block text-gray-700 hover:text-secondary transition">من نحن</a></li>
+                    <li><a href="pricing.html" class="block text-gray-700 hover:text-secondary transition">الأسعار</a></li>
+                    <li><a href="blog.html" class="block text-gray-700 hover:text-secondary transition">المدونة</a></li>
+                    <li><a href="contact.html" class="block text-gray-700 hover:text-secondary transition">اتصل بنا</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="relative h-96 flex items-center justify-center overflow-hidden mt-20">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=1920&h=600&fit=crop" alt="احجز الآن" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        
+        <div class="relative z-10 text-center text-white px-4" data-aos="fade-up">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4 font-tajawal">احجز موعدك الآن</h1>
+            <p class="text-xl md:text-2xl">خدمة سريعة وسهلة في 3 خطوات فقط</p>
+        </div>
+    </section>
+    
+    <!-- Booking Form Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <!-- Progress Steps -->
+                <div class="flex justify-between items-center mb-12" data-aos="fade-up">
+                    <div class="flex flex-col items-center flex-1">
+                        <div class="w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center text-xl font-bold mb-2">1</div>
+                        <div class="text-sm font-bold text-primary">اختر الخدمة</div>
+                    </div>
+                    <div class="flex-1 h-1 bg-gray-300 mx-4"></div>
+                    <div class="flex flex-col items-center flex-1">
+                        <div class="w-12 h-12 bg-gray-300 text-gray-600 rounded-full flex items-center justify-center text-xl font-bold mb-2">2</div>
+                        <div class="text-sm text-gray-600">حدد الموعد</div>
+                    </div>
+                    <div class="flex-1 h-1 bg-gray-300 mx-4"></div>
+                    <div class="flex flex-col items-center flex-1">
+                        <div class="w-12 h-12 bg-gray-300 text-gray-600 rounded-full flex items-center justify-center text-xl font-bold mb-2">3</div>
+                        <div class="text-sm text-gray-600">بياناتك</div>
+                    </div>
+                </div>
+                
+                <!-- Booking Form -->
+                <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12" data-aos="fade-up">
+                    <form id="booking-form" class="space-y-6">
+                        <!-- Service Selection -->
+                        <div>
+                            <label class="block text-lg font-bold text-primary mb-3 font-tajawal">اختر الخدمة *</label>
+                            <select name="service" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-secondary focus:outline-none transition">
+                                <option value="">-- اختر الخدمة --</option>
+                                <option value="carpet">تنظيف السجاد والموكيت</option>
+                                <option value="furniture">تنظيف الكنب والمفروشات</option>
+                                <option value="sanitize">تعقيم وتطهير</option>
+                                <option value="tanks">تنظيف الخزانات</option>
+                                <option value="buildings">تنظيف المباني والمنشآت</option>
+                                <option value="moving">نقل وترتيب الأثاث</option>
+                            </select>
+                            <p class="text-red-500 text-sm mt-1 hidden error-message">يرجى اختيار الخدمة</p>
+                        </div>
+                        
+                        <!-- Date Selection -->
+                        <div>
+                            <label class="block text-lg font-bold text-primary mb-3 font-tajawal">تاريخ الخدمة *</label>
+                            <input type="date" id="booking-date" name="date" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-secondary focus:outline-none transition">
+                            <p class="text-red-500 text-sm mt-1 hidden error-message">يرجى اختيار التاريخ</p>
+                        </div>
+                        
+                        <!-- Time Selection -->
+                        <div>
+                            <label class="block text-lg font-bold text-primary mb-3 font-tajawal">الوقت المفضل *</label>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                                <div class="time-slot bg-gray-100 hover:bg-secondary hover:text-white p-3 rounded-xl text-center font-bold border-2 border-gray-200" data-time="08:00">
+                                    8:00 صباحاً
+                                </div>
+                                <div class="time-slot bg-gray-100 hover:bg-secondary hover:text-white p-3 rounded-xl text-center font-bold border-2 border-gray-200" data-time="10:00">
+                                    10:00 صباحاً
+                                </div>
+                                <div class="time-slot bg-gray-100 hover:bg-secondary hover:text-white p-3 rounded-xl text-center font-bold border-2 border-gray-200" data-time="12:00">
+                                    12:00 ظهراً
+                                </div>
+                                <div class="time-slot bg-gray-100 hover:bg-secondary hover:text-white p-3 rounded-xl text-center font-bold border-2 border-gray-200" data-time="14:00">
+                                    2:00 مساءً
+                                </div>
+                                <div class="time-slot bg-gray-100 hover:bg-secondary hover:text-white p-3 rounded-xl text-center font-bold border-2 border-gray-200" data-time="16:00">
+                                    4:00 مساءً
+                                </div>
+                                <div class="time-slot bg-gray-100 hover:bg-secondary hover:text-white p-3 rounded-xl text-center font-bold border-2 border-gray-200" data-time="18:00">
+                                    6:00 مساءً
+                                </div>
+                                <div class="time-slot bg-gray-100 hover:bg-secondary hover:text-white p-3 rounded-xl text-center font-bold border-2 border-gray-200" data-time="20:00">
+                                    8:00 مساءً
+                                </div>
+                                <div class="time-slot bg-gray-100 hover:bg-secondary hover:text-white p-3 rounded-xl text-center font-bold border-2 border-gray-200" data-time="22:00">
+                                    10:00 مساءً
+                                </div>
+                            </div>
+                            <input type="hidden" id="selected-time" name="time" required>
+                            <p class="text-red-500 text-sm mt-1 hidden error-message">يرجى اختيار الوقت</p>
+                        </div>
+                        
+                        <!-- Name -->
+                        <div>
+                            <label class="block text-lg font-bold text-primary mb-3 font-tajawal">الاسم الكامل *</label>
+                            <input type="text" name="name" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-secondary focus:outline-none transition" placeholder="أدخل اسمك الكامل">
+                            <p class="text-red-500 text-sm mt-1 hidden error-message">يرجى إدخال الاسم</p>
+                        </div>
+                        
+                        <!-- Phone -->
+                        <div>
+                            <label class="block text-lg font-bold text-primary mb-3 font-tajawal">رقم الجوال *</label>
+                            <input type="tel" name="phone" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-secondary focus:outline-none transition" placeholder="05xxxxxxxx">
+                            <p class="text-red-500 text-sm mt-1 hidden error-message">يرجى إدخال رقم جوال صحيح</p>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div>
+                            <label class="block text-lg font-bold text-primary mb-3 font-tajawal">البريد الإلكتروني (اختياري)</label>
+                            <input type="email" name="email" class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-secondary focus:outline-none transition" placeholder="example@email.com">
+                        </div>
+                        
+                        <!-- Address -->
+                        <div>
+                            <label class="block text-lg font-bold text-primary mb-3 font-tajawal">العنوان *</label>
+                            <textarea name="address" required rows="3" class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-secondary focus:outline-none transition" placeholder="الحي، الشارع، رقم المبنى"></textarea>
+                            <p class="text-red-500 text-sm mt-1 hidden error-message">يرجى إدخال العنوان</p>
+                        </div>
+                        
+                        <!-- Notes -->
+                        <div>
+                            <label class="block text-lg font-bold text-primary mb-3 font-tajawal">ملاحظات إضافية (اختياري)</label>
+                            <textarea name="notes" rows="3" class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-secondary focus:outline-none transition" placeholder="أي تفاصيل إضافية تود إخبارنا بها"></textarea>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <button type="submit" class="w-full bg-gradient-to-r from-secondary to-accent hover:from-accent hover:to-secondary text-white px-8 py-4 rounded-full text-xl font-bold transition transform hover:scale-105 shadow-2xl">
+                            <i class="fas fa-calendar-check ml-2"></i>
+                            تأكيد الحجز
+                        </button>
+                        
+                        <p class="text-center text-gray-600 text-sm">
+                            بالنقر على "تأكيد الحجز"، أنت توافق على <a href="#" class="text-secondary hover:underline">شروط الخدمة</a>
+                        </p>
+                    </form>
+                </div>
+                
+                <!-- Benefits -->
+                <div class="grid md:grid-cols-3 gap-6 mt-12" data-aos="fade-up">
+                    <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                        <div class="bg-secondary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-clock text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-2 font-tajawal">حجز فوري</h3>
+                        <p class="text-gray-600">نأكد حجزك خلال دقائق</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                        <div class="bg-accent text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-shield-alt text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-2 font-tajawal">ضمان الجودة</h3>
+                        <p class="text-gray-600">نضمن رضاك 100%</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                        <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-percent text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-2 font-tajawal">خصم 20%</h3>
+                        <p class="text-gray-600">على أول حجز لك</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 space-x-reverse mb-4">
+                        <div class="text-3xl">✨</div>
+                        <div>
+                            <h3 class="text-xl font-bold font-tajawal">Plaza Clean</h3>
+                            <p class="text-sm text-secondary">نخلي أماكنك تبرق</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        شركتك الموثوقة للتنظيف الشامل في الدمام والمنطقة الشرقية.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 font-tajawal">روابط سريعة</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-secondary transition">الرئيسية</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-secondary transition">الخدمات</a></li>
+                        <li><a href="pricing.html" class="text-gray-400 hover:text-secondary transition">الأسعار</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-secondary transition">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 font-tajawal">خدماتنا</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#carpet" class="text-gray-400 hover:text-secondary transition">تنظيف السجاد</a></li>
+                        <li><a href="services.html#furniture" class="text-gray-400 hover:text-secondary transition">تنظيف الكنب</a></li>
+                        <li><a href="services.html#sanitize" class="text-gray-400 hover:text-secondary transition">التعقيم والتطهير</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 font-tajawal">تواصل معنا</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-secondary ml-3"></i>
+                            <a href="tel:0132345678" class="text-gray-400 hover:text-secondary transition">013-234-5678</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-whatsapp text-secondary ml-3"></i>
+                            <a href="https://wa.me/966501234567" class="text-gray-400 hover:text-secondary transition">+966-50-123-4567</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Plaza Clean. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/966501234567" target="_blank" class="whatsapp-float" aria-label="تواصل عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

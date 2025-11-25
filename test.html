@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plaza Clean - خدماتنا</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .contact-btn:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Services Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-blue-800 mb-4">
+                    خدماتنا المتميزة
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-amber-500 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    نقدم مجموعة شاملة من خدمات التنظيف الاحترافية لتلبية جميع احتياجاتك
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden service-card">
+                    <div class="h-48 bg-blue-600 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                             alt="تنظيف السجاد والموكيت" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-blue-900 bg-opacity-40 flex items-center justify-center">
+                            <div class="text-white text-center">
+                                <div class="text-4xl mb-2">
+                                    <i class="fas fa-rug"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold">تنظيف السجاد والموكيت</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            نظافة عميقة للسجاد والموكيت باستخدام أحدث معدات البخار والمواد المعتمدة. نزيل البقع الصعبة ونعيد اللون والحيوية.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="tel:+966500000000" class="contact-btn flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-bold">
+                                <i class="fas fa-phone mr-2"></i>اتصل
+                            </a>
+                            <a href="https://wa.me/966500000000?text=أريد الاستفسار عن خدمة تنظيف السجاد والموكيت" 
+                               target="_blank" 
+                               class="contact-btn flex-1 bg-green-500 hover:bg-green-600 text-white text-center py-2 px-4 rounded-lg font-bold">
+                                <i class="fab fa-whatsapp mr-2"></i>واتساب
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden service-card">
+                    <div class="h-48 bg-blue-600 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1158&q=80" 
+                             alt="تنظيف الكنب والمفروشات" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-blue-900 bg-opacity-40 flex items-center justify-center">
+                            <div class="text-white text-center">
+                                <div class="text-4xl mb-2">
+                                    <i class="fas fa-couch"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold">تنظيف الكنب والمفروشات</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            تنظيف شامل للكنب والمفروشات بطرق آمنة تحافظ على جودة الأقمشة. نزيل الأتربة والروائح ونعقم بعمق.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="tel:+966500000000" class="contact-btn flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-bold">
+                                <i class="fas fa-phone mr-2"></i>اتصل
+                            </a>
+                            <a href="https://wa.me/966500000000?text=أريد الاستفسار عن خدمة تنظيف الكنب والمفروشات" 
+                               target="_blank" 
+                               class="contact-btn flex-1 bg-green-500 hover:bg-green-600 text-white text-center py-2 px-4 rounded-lg font-bold">
+                                <i class="fab fa-whatsapp mr-2"></i>واتساب
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden service-card">
+                    <div class="h-48 bg-blue-600 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                             alt="تعقيم وتطهير" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-blue-900 bg-opacity-40 flex items-center justify-center">
+                            <div class="text-white text-center">
+                                <div class="text-4xl mb-2">
+                                    <i class="fas fa-shield-virus"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold">تعقيم وتطهير</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            خدمات تعقيم وتطهير شاملة باستخدام مواد معتمدة صحياً. حماية عائلتك من البكتيريا والفيروسات.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="tel:+966500000000" class="contact-btn flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-bold">
+                                <i class="fas fa-phone mr-2"></i>اتصل
+                            </a>
+                            <a href="https://wa.me/966500000000?text=أريد الاستفسار عن خدمة التعقيم والتطهير" 
+                               target="_blank" 
+                               class="contact-btn flex-1 bg-green-500 hover:bg-green-600 text-white text-center py-2 px-4 rounded-lg font-bold">
+                                <i class="fab fa-whatsapp mr-2"></i>واتساب
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden service-card">
+                    <div class="h-48 bg-blue-600 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" 
+                             alt="تنظيف الخزانات" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-blue-900 bg-opacity-40 flex items-center justify-center">
+                            <div class="text-white text-center">
+                                <div class="text-4xl mb-2">
+                                    <i class="fas fa-water"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold">تنظيف الخزانات</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            تنظيف وتعقيم خزانات المياه بمعايير صحية عالية. نضمن لك مياه نظيفة وآمنة لعائلتك.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="tel:+966500000000" class="contact-btn flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-bold">
+                                <i class="fas fa-phone mr-2"></i>اتصل
+                            </a>
+                            <a href="https://wa.me/966500000000?text=أريد الاستفسار عن خدمة تنظيف الخزانات" 
+                               target="_blank" 
+                               class="contact-btn flex-1 bg-green-500 hover:bg-green-600 text-white text-center py-2 px-4 rounded-lg font-bold">
+                                <i class="fab fa-whatsapp mr-2"></i>واتساب
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden service-card">
+                    <div class="h-48 bg-blue-600 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                             alt="تنظيف المباني والمنشآت" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-blue-900 bg-opacity-40 flex items-center justify-center">
+                            <div class="text-white text-center">
+                                <div class="text-4xl mb-2">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold">تنظيف المباني والمنشآت</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            تنظيف شامل للمباني والمنشآت التجارية والسكنية. خدمة متكاملة تشمل جميع المرافق.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="tel:+966500000000" class="contact-btn flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-bold">
+                                <i class="fas fa-phone mr-2"></i>اتصل
+                            </a>
+                            <a href="https://wa.me/966500000000?text=أريد الاستفسار عن خدمة تنظيف المباني والمنشآت" 
+                               target="_blank" 
+                               class="contact-btn flex-1 bg-green-500 hover:bg-green-600 text-white text-center py-2 px-4 rounded-lg font-bold">
+                                <i class="fab fa-whatsapp mr-2"></i>واتساب
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 6 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden service-card">
+                    <div class="h-48 bg-blue-600 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1336&q=80" 
+                             alt="نقل وترتيب الأثاث" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-blue-900 bg-opacity-40 flex items-center justify-center">
+                            <div class="text-white text-center">
+                                <div class="text-4xl mb-2">
+                                    <i class="fas fa-truck-moving"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold">نقل وترتيب الأثاث</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            نقل آمن للأثاث مع خدمات التغليف والترتيب. فريق محترف يضمن سلامة ممتلكاتك.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="tel:+966500000000" class="contact-btn flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-bold">
+                                <i class="fas fa-phone mr-2"></i>اتصل
+                            </a>
+                            <a href="https://wa.me/966500000000?text=أريد الاستفسار عن خدمة نقل وترتيب الأثاث" 
+                               target="_blank" 
+                               class="contact-btn flex-1 bg-green-500 hover:bg-green-600 text-white text-center py-2 px-4 rounded-lg font-bold">
+                                <i class="fab fa-whatsapp mr-2"></i>واتساب
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="services.html" class="inline-block bg-blue-800 hover:bg-blue-900 text-white px-8 py-4 rounded-full text-lg font-bold transition transform hover:scale-105">
+                    عرض جميع الخدمات
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/966500000000" target="_blank" class="fixed bottom-6 left-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <script>
+        // Add animation to service cards on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const serviceCards = document.querySelectorAll('.service-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            serviceCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>

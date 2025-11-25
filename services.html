@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="خدمات تنظيف متنوعة من Plaza Clean: تنظيف السجاد، الكنب، التعقيم، الخزانات، المباني، ونقل الأثاث في الدمام.">
+    <title>خدماتنا | Plaza Clean - تنظيف احترافي في الدمام</title>
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E✨%3C/text%3E%3C/svg%3E">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a5f',
+                        secondary: '#14b8a6',
+                        accent: '#f59e0b',
+                        dark: '#0f172a',
+                    },
+                    fontFamily: {
+                        'cairo': ['Cairo', 'sans-serif'],
+                        'tajawal': ['Tajawal', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(30, 58, 95, 0.95) 0%, rgba(20, 184, 166, 0.85) 100%);
+        }
+        
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .service-card {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .service-card:hover::before {
+            left: 100%;
+        }
+        
+        .pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(20, 184, 166, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(20, 184, 166, 0.8); }
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            left: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 20px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #128c7e;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <div class="text-4xl">✨</div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-primary font-tajawal">Plaza Clean</h1>
+                        <p class="text-xs text-secondary">نخلي أماكنك تبرق</p>
+                    </div>
+                </div>
+                
+                <ul class="hidden md:flex space-x-8 space-x-reverse font-tajawal">
+                    <li><a href="index.html" class="text-gray-700 hover:text-secondary transition">الرئيسية</a></li>
+                    <li><a href="services.html" class="text-primary hover:text-secondary transition font-semibold">الخدمات</a></li>
+                    <li><a href="gallery.html" class="text-gray-700 hover:text-secondary transition">معرض الأعمال</a></li>
+                    <li><a href="about.html" class="text-gray-700 hover:text-secondary transition">من نحن</a></li>
+                    <li><a href="pricing.html" class="text-gray-700 hover:text-secondary transition">الأسعار</a></li>
+                    <li><a href="blog.html" class="text-gray-700 hover:text-secondary transition">المدونة</a></li>
+                    <li><a href="contact.html" class="text-gray-700 hover:text-secondary transition">اتصل بنا</a></li>
+                </ul>
+                
+                <a href="booking.html" class="hidden md:block bg-secondary hover:bg-accent text-white px-6 py-3 rounded-full font-bold transition transform hover:scale-105 pulse-glow">
+                    احجز الآن
+                </a>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-primary focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <ul class="space-y-3 font-tajawal">
+                    <li><a href="index.html" class="block text-gray-700 hover:text-secondary transition">الرئيسية</a></li>
+                    <li><a href="services.html" class="block text-primary font-semibold hover:text-secondary transition">الخدمات</a></li>
+                    <li><a href="gallery.html" class="block text-gray-700 hover:text-secondary transition">معرض الأعمال</a></li>
+                    <li><a href="about.html" class="block text-gray-700 hover:text-secondary transition">من نحن</a></li>
+                    <li><a href="pricing.html" class="block text-gray-700 hover:text-secondary transition">الأسعار</a></li>
+                    <li><a href="blog.html" class="block text-gray-700 hover:text-secondary transition">المدونة</a></li>
+                    <li><a href="contact.html" class="block text-gray-700 hover:text-secondary transition">اتصل بنا</a></li>
+                    <li><a href="booking.html" class="block bg-secondary text-white px-6 py-3 rounded-full font-bold text-center">احجز الآن</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="relative h-96 flex items-center justify-center overflow-hidden mt-20">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=1920&h=600&fit=crop" alt="خدمات التنظيف" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        
+        <div class="relative z-10 text-center text-white px-4" data-aos="fade-up">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4 font-tajawal">خدماتنا المتنوعة</h1>
+            <p class="text-xl md:text-2xl">نقدم حلول تنظيف شاملة لكل احتياجاتك</p>
+        </div>
+    </section>
+    
+    <!-- Services Detail Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            
+            <!-- Service 1: Carpet Cleaning -->
+            <div id="carpet" class="mb-20" data-aos="fade-up">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="bg-gradient-to-br from-primary to-secondary text-white w-20 h-20 rounded-2xl flex items-center justify-center mb-6 shadow-xl">
+                            <i class="fas fa-rug text-4xl"></i>
+                        </div>
+                        <h2 class="text-4xl font-bold text-primary mb-4 font-tajawal">تنظيف السجاد والموكيت</h2>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                            نقدم خدمات تنظيف السجاد والموكيت باستخدام أحدث تقنيات التنظيف بالبخار والمواد المعتمدة عالمياً. فريقنا المتخصص يضمن إزالة البقع الصعبة، الأتربة العميقة، والروائح الكريهة، مع الحفاظ على نسيج وألوان سجادك كما هي.
+                        </p>
+                        
+                        <h3 class="text-2xl font-bold text-primary mb-3 font-tajawal">ما يشمله التنظيف:</h3>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">كشف البقع وتحديد نوع النسيج</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">شفط الأتربة والغبار بمعدات احترافية</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">معالجة البقع بمواد خاصة آمنة</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">التنظيف العميق بالبخار الساخن</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">التجفيف السريع (2-4 ساعات)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">تعطير وحماية ضد البقع المستقبلية</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <a href="booking.html" class="bg-secondary hover:bg-accent text-white px-8 py-3 rounded-full font-bold transition transform hover:scale-105">
+                                احجز الخدمة
+                            </a>
+                            <a href="pricing.html" class="bg-white hover:bg-gray-100 text-primary border-2 border-primary px-8 py-3 rounded-full font-bold transition">
+                                اطلع على الأسعار
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&h=600&fit=crop" alt="تنظيف السجاد" class="rounded-2xl shadow-2xl w-full">
+                        <div class="absolute -bottom-6 -right-6 bg-accent text-white p-6 rounded-2xl shadow-xl">
+                            <div class="text-3xl font-bold">15 ريال</div>
+                            <div class="text-sm">للمتر المربع</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service 2: Furniture Cleaning -->
+            <div id="furniture" class="mb-20" data-aos="fade-up">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1 relative">
+                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop" alt="تنظيف الكنب" class="rounded-2xl shadow-2xl w-full">
+                        <div class="absolute -bottom-6 -left-6 bg-secondary text-white p-6 rounded-2xl shadow-xl">
+                            <div class="text-3xl font-bold">200 ريال</div>
+                            <div class="text-sm">للقطعة الواحدة</div>
+                        </div>
+                    </div>
+                    
+                    <div class="order-1 md:order-2">
+                        <div class="bg-gradient-to-br from-secondary to-accent text-white w-20 h-20 rounded-2xl flex items-center justify-center mb-6 shadow-xl">
+                            <i class="fas fa-couch text-4xl"></i>
+                        </div>
+                        <h2 class="text-4xl font-bold text-primary mb-4 font-tajawal">تنظيف الكنب والمفروشات</h2>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                            خدمة تنظيف متخصصة للكنب والأرائك والمفروشات بجميع أنواعها. نستخدم تقنيات حديثة وآمنة تحافظ على جودة الأقمشة ونعومتها، مع إزالة فعالة للبقع والأوساخ والروائح.
+                        </p>
+                        
+                        <h3 class="text-2xl font-bold text-primary mb-3 font-tajawal">المميزات:</h3>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">تنظيف آمن لجميع أنواع الأقمشة</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">إزالة البقع الصعبة والعنيدة</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">تعقيم ضد البكتيريا والفطريات</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">تجفيف سريع ولا يترك رائحة</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">تنظيف الوسائد والمخدات</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">معالجة حماية ضد الأوساخ</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <a href="booking.html" class="bg-secondary hover:bg-accent text-white px-8 py-3 rounded-full font-bold transition transform hover:scale-105">
+                                احجز الخدمة
+                            </a>
+                            <a href="pricing.html" class="bg-white hover:bg-gray-100 text-primary border-2 border-primary px-8 py-3 rounded-full font-bold transition">
+                                اطلع على الأسعار
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service 3: Sanitization -->
+            <div id="sanitize" class="mb-20" data-aos="fade-up">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="bg-gradient-to-br from-accent to-primary text-white w-20 h-20 rounded-2xl flex items-center justify-center mb-6 shadow-xl">
+                            <i class="fas fa-shield-virus text-4xl"></i>
+                        </div>
+                        <h2 class="text-4xl font-bold text-primary mb-4 font-tajawal">تعقيم وتطهير شامل</h2>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                            خدمات تعقيم وتطهير احترافية باستخدام مواد معتمدة من وزارة الصحة. نضمن لك بيئة صحية خالية من البكتيريا، الفيروسات، والجراثيم. مثالية للمنازل، المكاتب، المدارس، والمنشآت الصحية.
+                        </p>
+                        
+                        <h3 class="text-2xl font-bold text-primary mb-3 font-tajawal">ماذا نعقم:</h3>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">الأسطح والأرضيات والجدران</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">المفاتيح ومقابض الأبواب</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">الحمامات والمطابخ</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">الأثاث والمفروشات</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">أجهزة الكمبيوتر والهواتف</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">أنظمة التكييف والتهوية</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="bg-green-50 border-r-4 border-green-500 p-4 mb-6">
+                            <div class="flex">
+                                <i class="fas fa-info-circle text-green-500 text-xl ml-3"></i>
+                                <div>
+                                    <h4 class="font-bold text-green-800 mb-1">آمن 100%</h4>
+                                    <p class="text-green-700 text-sm">جميع مواد التعقيم معتمدة صحياً وآمنة للأطفال والحيوانات الأليفة</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <a href="booking.html" class="bg-secondary hover:bg-accent text-white px-8 py-3 rounded-full font-bold transition transform hover:scale-105">
+                                احجز الخدمة
+                            </a>
+                            <a href="pricing.html" class="bg-white hover:bg-gray-100 text-primary border-2 border-primary px-8 py-3 rounded-full font-bold transition">
+                                اطلع على الأسعار
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1584744982493-54e5e9d23356?w=800&h=600&fit=crop" alt="التعقيم والتطهير" class="rounded-2xl shadow-2xl w-full">
+                        <div class="absolute -bottom-6 -right-6 bg-accent text-white p-6 rounded-2xl shadow-xl">
+                            <div class="text-3xl font-bold">10 ريال</div>
+                            <div class="text-sm">للمتر المربع</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service 4: Tank Cleaning -->
+            <div id="tanks" class="mb-20" data-aos="fade-up">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1 relative">
+                        <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?w=800&h=600&fit=crop" alt="تنظيف الخزانات" class="rounded-2xl shadow-2xl w-full">
+                        <div class="absolute -bottom-6 -left-6 bg-primary text-white p-6 rounded-2xl shadow-xl">
+                            <div class="text-3xl font-bold">500 ريال</div>
+                            <div class="text-sm">للخزان الواحد</div>
+                        </div>
+                    </div>
+                    
+                    <div class="order-1 md:order-2">
+                        <div class="bg-gradient-to-br from-primary to-accent text-white w-20 h-20 rounded-2xl flex items-center justify-center mb-6 shadow-xl">
+                            <i class="fas fa-water text-4xl"></i>
+                        </div>
+                        <h2 class="text-4xl font-bold text-primary mb-4 font-tajawal">تنظيف وتعقيم الخزانات</h2>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                            خدمة تنظيف وتعقيم خزانات المياه بمعايير صحية عالية. نضمن لك مياه نظيفة وآمنة لعائلتك طوال العام. فريقنا المتخصص يستخدم أحدث المعدات ومواد التعقيم المعتمدة.
+                        </p>
+                        
+                        <h3 class="text-2xl font-bold text-primary mb-3 font-tajawal">خطوات التنظيف:</h3>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <div class="bg-secondary text-white rounded-full w-8 h-8 flex items-center justify-center ml-3 mt-0.5 flex-shrink-0">1</div>
+                                <span class="text-gray-700">تفريغ الخزان بالكامل</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-secondary text-white rounded-full w-8 h-8 flex items-center justify-center ml-3 mt-0.5 flex-shrink-0">2</div>
+                                <span class="text-gray-700">إزالة الرواسب والشوائب</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-secondary text-white rounded-full w-8 h-8 flex items-center justify-center ml-3 mt-0.5 flex-shrink-0">3</div>
+                                <span class="text-gray-700">التنظيف العميق بمواد آمنة</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-secondary text-white rounded-full w-8 h-8 flex items-center justify-center ml-3 mt-0.5 flex-shrink-0">4</div>
+                                <span class="text-gray-700">التعقيم بالكلور المعتمد</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-secondary text-white rounded-full w-8 h-8 flex items-center justify-center ml-3 mt-0.5 flex-shrink-0">5</div>
+                                <span class="text-gray-700">الشطف الجيد والتجفيف</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-secondary text-white rounded-full w-8 h-8 flex items-center justify-center ml-3 mt-0.5 flex-shrink-0">6</div>
+                                <span class="text-gray-700">فحص الجودة وشهادة التعقيم</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="bg-blue-50 border-r-4 border-blue-500 p-4 mb-6">
+                            <div class="flex">
+                                <i class="fas fa-calendar-alt text-blue-500 text-xl ml-3"></i>
+                                <div>
+                                    <h4 class="font-bold text-blue-800 mb-1">التنظيف الدوري</h4>
+                                    <p class="text-blue-700 text-sm">ننصح بتنظيف الخزانات كل 6 أشهر للحفاظ على صحة عائلتك</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <a href="booking.html" class="bg-secondary hover:bg-accent text-white px-8 py-3 rounded-full font-bold transition transform hover:scale-105">
+                                احجز الخدمة
+                            </a>
+                            <a href="contact.html" class="bg-white hover:bg-gray-100 text-primary border-2 border-primary px-8 py-3 rounded-full font-bold transition">
+                                استشارة مجانية
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service 5: Building Cleaning -->
+            <div id="buildings" class="mb-20" data-aos="fade-up">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="bg-gradient-to-br from-secondary to-primary text-white w-20 h-20 rounded-2xl flex items-center justify-center mb-6 shadow-xl">
+                            <i class="fas fa-building text-4xl"></i>
+                        </div>
+                        <h2 class="text-4xl font-bold text-primary mb-4 font-tajawal">تنظيف المباني والمنشآت</h2>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                            نقدم خدمات تنظيف شاملة للمباني السكنية والتجارية والمنشآت الحكومية. فريق عمل كبير ومدرب على أعلى مستوى لإنجاز المشاريع الكبيرة بكفاءة واحترافية.
+                        </p>
+                        
+                        <h3 class="text-2xl font-bold text-primary mb-3 font-tajawal">نخدم:</h3>
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="flex items-center">
+                                <i class="fas fa-home text-secondary text-xl ml-3"></i>
+                                <span class="text-gray-700">المباني السكنية</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-briefcase text-secondary text-xl ml-3"></i>
+                                <span class="text-gray-700">المكاتب والشركات</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-store text-secondary text-xl ml-3"></i>
+                                <span class="text-gray-700">المحلات التجارية</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-hospital text-secondary text-xl ml-3"></i>
+                                <span class="text-gray-700">المنشآت الطبية</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-school text-secondary text-xl ml-3"></i>
+                                <span class="text-gray-700">المدارس والجامعات</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-hotel text-secondary text-xl ml-3"></i>
+                                <span class="text-gray-700">الفنادق والمنتجعات</span>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold text-primary mb-3 font-tajawal">الخدمات المشمولة:</h3>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">تنظيف الواجهات والنوافذ</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">تنظيف الأرضيات والممرات</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">تنظيف دورات المياه</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">تنظيف مداخل ومخارج الطوارئ</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">إزالة المخلفات والقمامة</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <a href="booking.html" class="bg-secondary hover:bg-accent text-white px-8 py-3 rounded-full font-bold transition transform hover:scale-105">
+                                اطلب عرض سعر
+                            </a>
+                            <a href="contact.html" class="bg-white hover:bg-gray-100 text-primary border-2 border-primary px-8 py-3 rounded-full font-bold transition">
+                                تواصل معنا
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop" alt="تنظيف المباني" class="rounded-2xl shadow-2xl w-full">
+                        <div class="absolute -bottom-6 -right-6 bg-secondary text-white p-6 rounded-2xl shadow-xl">
+                            <div class="text-3xl font-bold">5 ريال</div>
+                            <div class="text-sm">للمتر المربع</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service 6: Moving -->
+            <div id="moving" class="mb-20" data-aos="fade-up">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1 relative">
+                        <img src="https://images.unsplash.com/photo-1600518464441-9154a4dea21d?w=800&h=600&fit=crop" alt="نقل الأثاث" class="rounded-2xl shadow-2xl w-full">
+                        <div class="absolute -bottom-6 -left-6 bg-accent text-white p-6 rounded-2xl shadow-xl">
+                            <div class="text-3xl font-bold">300 ريال</div>
+                            <div class="text-sm">للغرفة الواحدة</div>
+                        </div>
+                    </div>
+                    
+                    <div class="order-1 md:order-2">
+                        <div class="bg-gradient-to-br from-accent to-secondary text-white w-20 h-20 rounded-2xl flex items-center justify-center mb-6 shadow-xl">
+                            <i class="fas fa-truck-moving text-4xl"></i>
+                        </div>
+                        <h2 class="text-4xl font-bold text-primary mb-4 font-tajawal">نقل وترتيب الأثاث</h2>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                            خدمة نقل أثاث احترافية مع ضمان سلامة ممتلكاتك. نوفر فريق متخصص في الفك، التغليف، النقل، والتركيب. نستخدم مواد تغليف عالية الجودة وشاحنات مجهزة.
+                        </p>
+                        
+                        <h3 class="text-2xl font-bold text-primary mb-3 font-tajawal">خدماتنا تشمل:</h3>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">فك الأثاث بعناية وحرفية</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">تغليف احترافي بمواد حماية</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">نقل آمن بشاحنات مجهزة</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">تركيب وترتيب في المكان الجديد</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">تنظيف بعد النقل (اختياري)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary text-xl ml-3 mt-1"></i>
+                                <span class="text-gray-700">تأمين شامل على الأثاث</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="bg-yellow-50 border-r-4 border-yellow-500 p-4 mb-6">
+                            <div class="flex">
+                                <i class="fas fa-truck text-yellow-500 text-xl ml-3"></i>
+                                <div>
+                                    <h4 class="font-bold text-yellow-800 mb-1">خدمة سريعة</h4>
+                                    <p class="text-yellow-700 text-sm">نقل داخل الدمام في نفس اليوم • خدمة 24 ساعة متاحة</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <a href="booking.html" class="bg-secondary hover:bg-accent text-white px-8 py-3 rounded-full font-bold transition transform hover:scale-105">
+                                احجز الآن
+                            </a>
+                            <a href="tel:0132345678" class="bg-white hover:bg-gray-100 text-primary border-2 border-primary px-8 py-3 rounded-full font-bold transition">
+                                <i class="fas fa-phone ml-2"></i>
+                                اتصل بنا
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-primary via-secondary to-accent">
+        <div class="container mx-auto px-4 text-center text-white" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 font-tajawal">جاهز لتجربة النظافة الحقيقية؟</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">احجز أي خدمة الآن واحصل على خصم 20% على أول زيارة!</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="booking.html" class="bg-white hover:bg-accent text-primary hover:text-white px-10 py-4 rounded-full text-lg font-bold transition transform hover:scale-105 shadow-2xl">
+                    <i class="fas fa-calendar-check ml-2"></i>
+                    احجز الآن
+                </a>
+                <a href="contact.html" class="bg-accent hover:bg-white text-white hover:text-primary px-10 py-4 rounded-full text-lg font-bold transition transform hover:scale-105 shadow-2xl">
+                    <i class="fas fa-headset ml-2"></i>
+                    تحدث معنا
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 space-x-reverse mb-4">
+                        <div class="text-3xl">✨</div>
+                        <div>
+                            <h3 class="text-xl font-bold font-tajawal">Plaza Clean</h3>
+                            <p class="text-sm text-secondary">نخلي أماكنك تبرق</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        شركتك الموثوقة للتنظيف الشامل في الدمام والمنطقة الشرقية.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 font-tajawal">روابط سريعة</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-secondary transition">الرئيسية</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-secondary transition">الخدمات</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-secondary transition">من نحن</a></li>
+                        <li><a href="pricing.html" class="text-gray-400 hover:text-secondary transition">الأسعار</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-secondary transition">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 font-tajawal">خدماتنا</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#carpet" class="text-gray-400 hover:text-secondary transition">تنظيف السجاد</a></li>
+                        <li><a href="#furniture" class="text-gray-400 hover:text-secondary transition">تنظيف الكنب</a></li>
+                        <li><a href="#sanitize" class="text-gray-400 hover:text-secondary transition">التعقيم والتطهير</a></li>
+                        <li><a href="#tanks" class="text-gray-400 hover:text-secondary transition">تنظيف الخزانات</a></li>
+                        <li><a href="#buildings" class="text-gray-400 hover:text-secondary transition">تنظيف المباني</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 font-tajawal">تواصل معنا</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-secondary ml-3"></i>
+                            <a href="tel:0132345678" class="text-gray-400 hover:text-secondary transition">013-234-5678</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-whatsapp text-secondary ml-3"></i>
+                            <a href="https://wa.me/966501234567" class="text-gray-400 hover:text-secondary transition">+966-50-123-4567</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-secondary ml-3"></i>
+                            <a href="mailto:info@plazaclean-dammam.sa" class="text-gray-400 hover:text-secondary transition">info@plazaclean-dammam.sa</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="flex space-x-4 space-x-reverse mt-6">
+                        <a href="#" class="w-10 h-10 bg-secondary hover:bg-accent rounded-full flex items-center justify-center transition transform hover:scale-110">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-secondary hover:bg-accent rounded-full flex items-center justify-center transition transform hover:scale-110">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-secondary hover:bg-accent rounded-full flex items-center justify-center transition transform hover:scale-110">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Plaza Clean. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/966501234567" target="_blank" class="whatsapp-float" aria-label="تواصل عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

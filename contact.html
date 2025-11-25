@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تواصل مع Plaza Clean - نحن هنا لخدمتك">
+    <title>اتصل بنا | Plaza Clean</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E✨%3C/text%3E%3C/svg%3E">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#1e3a5f', secondary: '#14b8a6', accent: '#f59e0b', dark: '#0f172a' },
+                    fontFamily: { 'cairo': ['Cairo', 'sans-serif'], 'tajawal': ['Tajawal', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Cairo', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, rgba(30, 58, 95, 0.95) 0%, rgba(20, 184, 166, 0.85) 100%); }
+        .pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+        @keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 20px rgba(20, 184, 166, 0.5); } 50% { box-shadow: 0 0 40px rgba(20, 184, 166, 0.8); } }
+        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 30px; left: 30px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 2px 20px rgba(0,0,0,0.3); z-index: 1000; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; animation: pulse 2s infinite; }
+        .whatsapp-float:hover { transform: scale(1.1); background-color: #128c7e; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <div class="text-4xl">✨</div>
+                    <div><h1 class="text-2xl font-bold text-primary font-tajawal">Plaza Clean</h1><p class="text-xs text-secondary">نخلي أماكنك تبرق</p></div>
+                </div>
+                <ul class="hidden md:flex space-x-8 space-x-reverse font-tajawal">
+                    <li><a href="index.html" class="text-gray-700 hover:text-secondary transition">الرئيسية</a></li>
+                    <li><a href="services.html" class="text-gray-700 hover:text-secondary transition">الخدمات</a></li>
+                    <li><a href="gallery.html" class="text-gray-700 hover:text-secondary transition">معرض الأعمال</a></li>
+                    <li><a href="about.html" class="text-gray-700 hover:text-secondary transition">من نحن</a></li>
+                    <li><a href="pricing.html" class="text-gray-700 hover:text-secondary transition">الأسعار</a></li>
+                    <li><a href="blog.html" class="text-gray-700 hover:text-secondary transition">المدونة</a></li>
+                    <li><a href="contact.html" class="text-primary hover:text-secondary transition font-semibold">اتصل بنا</a></li>
+                </ul>
+                <a href="booking.html" class="hidden md:block bg-secondary hover:bg-accent text-white px-6 py-3 rounded-full font-bold transition transform hover:scale-105 pulse-glow">احجز الآن</a>
+                <button id="mobile-menu-btn" class="md:hidden text-primary focus:outline-none"><i class="fas fa-bars text-2xl"></i></button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4"><ul class="space-y-3 font-tajawal"><li><a href="index.html" class="block text-gray-700 hover:text-secondary transition">الرئيسية</a></li><li><a href="services.html" class="block text-gray-700 hover:text-secondary transition">الخدمات</a></li><li><a href="gallery.html" class="block text-gray-700 hover:text-secondary transition">معرض الأعمال</a></li><li><a href="about.html" class="block text-gray-700 hover:text-secondary transition">من نحن</a></li><li><a href="pricing.html" class="block text-gray-700 hover:text-secondary transition">الأسعار</a></li><li><a href="blog.html" class="block text-gray-700 hover:text-secondary transition">المدونة</a></li><li><a href="contact.html" class="block text-primary font-semibold hover:text-secondary transition">اتصل بنا</a></li><li><a href="booking.html" class="block bg-secondary text-white px-6 py-3 rounded-full font-bold text-center">احجز الآن</a></li></ul></div>
+        </div>
+    </nav>
+    
+    <!-- Hero -->
+    <section class="relative h-96 flex items-center justify-center overflow-hidden mt-20">
+        <div class="absolute inset-0 z-0"><img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&h=600&fit=crop" alt="اتصل بنا" class="w-full h-full object-cover"><div class="absolute inset-0 hero-gradient"></div></div>
+        <div class="relative z-10 text-center text-white px-4" data-aos="fade-up"><h1 class="text-5xl md:text-6xl font-bold mb-4 font-tajawal">تواصل معنا</h1><p class="text-xl md:text-2xl">نحن هنا لخدمتك على مدار الساعة</p></div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div data-aos="fade-up">
+                    <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
+                        <h2 class="text-3xl font-bold text-primary mb-6 font-tajawal">أرسل لنا رسالة</h2>
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label class="block text-lg font-bold text-primary mb-2">الاسم *</label>
+                                <input type="text" name="name" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-secondary focus:outline-none transition" placeholder="أدخل اسمك">
+                                <p class="text-red-500 text-sm mt-1 hidden error-message">يرجى إدخال الاسم</p>
+                            </div>
+                            <div>
+                                <label class="block text-lg font-bold text-primary mb-2">البريد الإلكتروني *</label>
+                                <input type="email" name="email" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-secondary focus:outline-none transition" placeholder="example@email.com">
+                                <p class="text-red-500 text-sm mt-1 hidden error-message">يرجى إدخال بريد إلكتروني صحيح</p>
+                            </div>
+                            <div>
+                                <label class="block text-lg font-bold text-primary mb-2">رقم الجوال *</label>
+                                <input type="tel" name="phone" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-secondary focus:outline-none transition" placeholder="05xxxxxxxx">
+                                <p class="text-red-500 text-sm mt-1 hidden error-message">يرجى إدخال رقم جوال صحيح</p>
+                            </div>
+                            <div>
+                                <label class="block text-lg font-bold text-primary mb-2">الموضوع *</label>
+                                <input type="text" name="subject" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-secondary focus:outline-none transition" placeholder="موضوع الرسالة">
+                                <p class="text-red-500 text-sm mt-1 hidden error-message">يرجى إدخال الموضوع</p>
+                            </div>
+                            <div>
+                                <label class="block text-lg font-bold text-primary mb-2">الرسالة *</label>
+                                <textarea name="message" required rows="5" class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-secondary focus:outline-none transition" placeholder="اكتب رسالتك هنا..."></textarea>
+                                <p class="text-red-500 text-sm mt-1 hidden error-message">يرجى كتابة الرسالة</p>
+                            </div>
+                            <button type="submit" class="w-full bg-gradient-to-r from-secondary to-accent hover:from-accent hover:to-secondary text-white px-8 py-4 rounded-full text-xl font-bold transition transform hover:scale-105 shadow-2xl">
+                                <i class="fas fa-paper-plane ml-2"></i>إرسال الرسالة
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="space-y-8" data-aos="fade-up">
+                    <!-- Info Cards -->
+                    <div class="bg-gradient-to-br from-primary to-secondary text-white rounded-3xl p-8 shadow-2xl">
+                        <h3 class="text-2xl font-bold mb-6 font-tajawal">معلومات التواصل</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-white bg-opacity-20 rounded-full w-12 h-12 flex items-center justify-center ml-4 flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">العنوان</h4>
+                                    <p class="opacity-90">طريق الملك فهد، حي الشاطئ<br>الدمام 32413، المملكة العربية السعودية</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-white bg-opacity-20 rounded-full w-12 h-12 flex items-center justify-center ml-4 flex-shrink-0">
+                                    <i class="fas fa-phone text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">الهاتف</h4>
+                                    <p class="opacity-90"><a href="tel:0132345678" class="hover:underline">013-234-5678</a></p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-white bg-opacity-20 rounded-full w-12 h-12 flex items-center justify-center ml-4 flex-shrink-0">
+                                    <i class="fab fa-whatsapp text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">واتساب</h4>
+                                    <p class="opacity-90"><a href="https://wa.me/966501234567" class="hover:underline">+966-50-123-4567</a></p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-white bg-opacity-20 rounded-full w-12 h-12 flex items-center justify-center ml-4 flex-shrink-0">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">البريد الإلكتروني</h4>
+                                    <p class="opacity-90"><a href="mailto:info@plazaclean-dammam.sa" class="hover:underline">info@plazaclean-dammam.sa</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Working Hours -->
+                    <div class="bg-white rounded-3xl p-8 shadow-xl">
+                        <h3 class="text-2xl font-bold text-primary mb-6 font-tajawal"><i class="far fa-clock ml-2 text-secondary"></i>ساعات العمل</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center pb-4 border-b border-gray-200">
+                                <span class="font-bold">السبت - الخميس</span>
+                                <span class="text-secondary">7:00 صباحاً - 10:00 مساءً</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold">الجمعة</span>
+                                <span class="text-secondary">2:00 ظهراً - 10:00 مساءً</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="bg-white rounded-3xl p-8 shadow-xl">
+                        <h3 class="text-2xl font-bold text-primary mb-6 font-tajawal">تابعنا</h3>
+                        <div class="flex gap-4">
+                            <a href="#" class="w-14 h-14 bg-gradient-to-br from-primary to-secondary hover:from-accent hover:to-accent text-white rounded-full flex items-center justify-center text-xl transition transform hover:scale-110 shadow-lg">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-14 h-14 bg-gradient-to-br from-primary to-secondary hover:from-accent hover:to-accent text-white rounded-full flex items-center justify-center text-xl transition transform hover:scale-110 shadow-lg">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-14 h-14 bg-gradient-to-br from-primary to-secondary hover:from-accent hover:to-accent text-white rounded-full flex items-center justify-center text-xl transition transform hover:scale-110 shadow-lg">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-14 h-14 bg-gradient-to-br from-primary to-secondary hover:from-accent hover:to-accent text-white rounded-full flex items-center justify-center text-xl transition transform hover:scale-110 shadow-lg">
+                                <i class="fab fa-snapchat-ghost"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Map Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-primary mb-4 font-tajawal">موقعنا على الخريطة</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-secondary to-accent mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600">قم بزيارتنا أو اتصل بنا للحصول على الاتجاهات</p>
+            </div>
+            
+            <!-- Google Maps Embed -->
+            <div class="rounded-3xl overflow-hidden shadow-2xl" data-aos="fade-up" style="height: 500px;">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3574.5839391564776!2d50.08663631501584!3d26.420722183369687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDI1JzE0LjYiTiA1MMKwMDUnMTkuMiJF!5e0!3m2!1sar!2ssa!4v1234567890123!5m2!1sar!2ssa"
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center space-x-3 space-x-reverse mb-4">
+                <div class="text-3xl">✨</div>
+                <div><h3 class="text-xl font-bold font-tajawal">Plaza Clean</h3><p class="text-sm text-secondary">نخلي أماكنك تبرق</p></div>
+            </div>
+            <p class="text-gray-400 mb-4">شركتك الموثوقة للتنظيف الشامل في الدمام والمنطقة الشرقية</p>
+            <p class="text-gray-400 text-sm">&copy; 2024 Plaza Clean. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+    
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/966501234567" target="_blank" class="whatsapp-float" aria-label="تواصل عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
