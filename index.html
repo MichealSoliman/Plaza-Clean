@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Plaza Clean - شركة تنظيف احترافية في الدمام. خدمات تنظيف شاملة للمنازل والمكاتب والمنشآت باستخدام أحدث التقنيات.">
-    <meta name="keywords" content="تنظيف الدمام، شركة تنظيف، تنظيف منازل، تنظيف مكاتب، تعقيم، الدمام">
-    <meta name="author" content="Plaza Clean">
-    <title>Plaza Clean - نخلي أماكنك تبرق | خدمات تنظيف احترافية في الدمام</title>
+    <meta name="description" content="بلازا كلين - شركة تنظيف احترافية في المدينة المنورة. خدمات تنظيف شاملة للمنازل والمكاتب والمنشآت باستخدام أحدث التقنيات.">
+    <meta name="keywords" content="تنظيف المدينة المنورة، شركة تنظيف، تنظيف منازل، تنظيف مكاتب، تعقيم، المدينة المنورة">
+    <meta name="author" content="بلازا كلين">
+    <title>بلازا كلين - نخلي أماكنك تبرق | خدمات تنظيف احترافية في المدينة المنورة</title>
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Plaza Clean - خدمات تنظيف احترافية في الدمام">
+    <meta property="og:title" content="بلازا كلين - خدمات تنظيف احترافية في المدينة المنورة">
     <meta property="og:description" content="نحول مساحاتك إلى واحة نظافة. خدمات تنظيف شاملة واحترافية.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ar_SA">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E✨%3C/text%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="./img/logo.png">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -176,6 +176,283 @@
             background: linear-gradient(135deg, #14b8a6 0%, #1e3a5f 100%);
         }
     </style>
+    <!-- services -->
+         
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-image-container {
+            overflow: hidden;
+            height: auto;
+        }
+        
+        .service-image {
+            height: auto;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-card:hover .service-image {
+            transform: scale(1.1);
+        }
+        
+        .contact-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .contact-btn:hover {
+            transform: scale(1.05);
+        }
+    </style>
+    <!-- Why Choose Us -->
+      <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .feature-card {
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #10b981);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+        
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .feature-icon {
+            transition: all 0.4s ease;
+        }
+        
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+    <!-- Testimonials -->
+        <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .testimonial-card {
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 80px;
+            color: rgba(59, 130, 246, 0.1);
+            font-family: serif;
+            line-height: 1;
+        }
+        
+        .client-avatar {
+            transition: all 0.4s ease;
+        }
+        
+        .testimonial-card:hover .client-avatar {
+            transform: scale(1.1);
+        }
+        
+        .stars {
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from {
+                filter: drop-shadow(0 0 5px rgba(251, 191, 36, 0.5));
+            }
+            to {
+                filter: drop-shadow(0 0 15px rgba(251, 191, 36, 0.8));
+            }
+        }
+        
+        .dark-gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0f766e 100%);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .pulse-dot {
+            animation: pulse-dot 2s infinite;
+        }
+        
+        @keyframes pulse-dot {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.5); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+        <!-- Excellence in Cleanliness Section -->
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .clean-feature-card {
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .clean-feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        .clean-feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #10b981, #3b82f6);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+        
+        .clean-feature-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .feature-icon {
+            transition: all 0.4s ease;
+        }
+        
+        .clean-feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .sparkle {
+            animation: sparkle 2s ease-in-out infinite;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.1); }
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #10b981, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .shine-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .shine-effect::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+            );
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+    </style>
 </head>
 <body class="bg-gray-50">
     
@@ -185,9 +462,9 @@
             <div class="flex justify-between items-center py-4">
                 <!-- Logo -->
                 <div class="flex items-center space-x-3 space-x-reverse">
-                    <div class="text-4xl">✨</div>
+                    <img src="./img/logo.png" class="w-16 h-16" alt="">
                     <div>
-                        <h1 class="text-2xl font-bold text-primary font-tajawal">Plaza Clean</h1>
+                        <h1 class="text-2xl font-bold text-primary font-tajawal">بلازا كلين</h1>
                         <p class="text-xs text-secondary">نخلي أماكنك تبرق</p>
                     </div>
                 </div>
@@ -245,7 +522,7 @@
                 <i class="fas fa-sparkles text-6xl text-accent"></i>
             </div>
             <h1 class="text-5xl md:text-7xl font-bold mb-6 font-tajawal leading-tight">
-                خدمات تنظيف احترافية <br>في الدمام
+                خدمات تنظيف احترافية <br>في المدينة المنورة
             </h1>
             <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
                 نحول مساحاتك إلى واحة نظافة
@@ -293,304 +570,781 @@
                 </h2>
                 <div class="w-24 h-1 bg-gradient-to-r from-secondary to-accent mx-auto mb-8"></div>
                 <p class="text-xl text-gray-700 leading-relaxed mb-6">
-                    <strong class="text-primary">Plaza Clean</strong> هي شركتك الموثوقة للتنظيف الشامل في الدمام والمنطقة الشرقية. نقدم خدمات تنظيف احترافية للمنازل والمكاتب والمنشآت باستخدام أحدث التقنيات ومواد صديقة للبيئة.
+                    <strong class="text-primary">بلازا كلين</strong> هي شركتك الموثوقة للتنظيف الشامل في المدينة المنورة والمنطقة الشرقية. نقدم خدمات تنظيف احترافية للمنازل والمكاتب والمنشآت باستخدام أحدث التقنيات ومواد صديقة للبيئة.
                 </p>
                 <p class="text-xl text-gray-700 leading-relaxed mb-6">
                     فريقنا المدرب يضمن لك نتائج مبهرة في كل مرة. نحن نؤمن بأن النظافة ليست مجرد خدمة، بل هي استثمار في صحتك وراحتك.
                 </p>
                 <p class="text-xl text-gray-700 leading-relaxed">
-                    مع <strong class="text-secondary">Plaza Clean</strong>، أنت في أيدٍ أمينة. ثق بنا لنحول مساحاتك إلى واحة من النظافة والانتعاش.
+                    مع <strong class="text-secondary">بلازا كلين</strong>، أنت في أيدٍ أمينة. ثق بنا لنحول مساحاتك إلى واحة من النظافة والانتعاش.
                 </p>
             </div>
         </div>
     </section>
     
-    <!-- Services Section -->
-    <section class="py-20 bg-gray-50">
+       <!-- Services Section -->
+    <section class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-4 font-tajawal">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">
                     خدماتنا المتميزة
                 </h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-secondary to-accent mx-auto mb-6"></div>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
                     نقدم مجموعة شاملة من خدمات التنظيف الاحترافية لتلبية جميع احتياجاتك
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Service Card 1 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden service-card hover-lift" data-aos="fade-up" data-aos-delay="100">
-                    <div class="bg-gradient-to-br from-primary to-secondary p-8 text-white">
-                        <div class="text-6xl mb-4">
-                            <i class="fas fa-rug"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2 font-tajawal">تنظيف السجاد والموكيت</h3>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card">
+                    <div class="service-image-container h-auto">
+                        <img src="./img/carpet-and-rug-cleaning.png" 
+                             alt="تنظيف السجاد والموكيت" 
+                             class="service-image">
                     </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 leading-relaxed mb-4">
+                    <div class="p-5">
+                        <div class="flex items-center mb-3">
+                            <div class="bg-blue-100 text-blue-600 p-2 rounded-lg ml-3">
+                                <i class="fas fa-rug"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-blue-800">تنظيف السجاد والموكيت</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">
                             نظافة عميقة للسجاد والموكيت باستخدام أحدث معدات البخار والمواد المعتمدة. نزيل البقع الصعبة ونعيد اللون والحيوية.
                         </p>
-                        <a href="services.html#carpet" class="text-secondary font-bold hover:text-accent transition">
-                            اعرف المزيد <i class="fas fa-arrow-left mr-2"></i>
-                        </a>
+                        <div class="flex gap-2">
+                            <a href="tel:+966500000000" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-3 rounded-lg text-sm font-bold contact-btn">
+                                <i class="fas fa-phone ml-1"></i>اتصل
+                            </a>
+                            <a href="https://wa.me/966500000000?text=أريد الاستفسار عن خدمة تنظيف السجاد والموكيت" 
+                               target="_blank" 
+                               class="flex-1 bg-green-500 hover:bg-green-600 text-white text-center py-2 px-3 rounded-lg text-sm font-bold contact-btn">
+                                <i class="fab fa-whatsapp ml-1"></i>واتساب
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
                 <!-- Service Card 2 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden service-card hover-lift" data-aos="fade-up" data-aos-delay="200">
-                    <div class="bg-gradient-to-br from-secondary to-accent p-8 text-white">
-                        <div class="text-6xl mb-4">
-                            <i class="fas fa-couch"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2 font-tajawal">تنظيف الكنب والمفروشات</h3>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card">
+                    <div class="service-image-container">
+                        <img src="./img/sofa-and-furniture-cleaning.png" 
+                             alt="تنظيف الكنب والمفروشات" 
+                             class="service-image">
                     </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 leading-relaxed mb-4">
+                    <div class="p-5">
+                        <div class="flex items-center mb-3">
+                            <div class="bg-blue-100 text-blue-600 p-2 rounded-lg ml-3">
+                                <i class="fas fa-couch"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-blue-800">تنظيف الكنب والمفروشات</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">
                             تنظيف شامل للكنب والمفروشات بطرق آمنة تحافظ على جودة الأقمشة. نزيل الأتربة والروائح ونعقم بعمق.
                         </p>
-                        <a href="services.html#furniture" class="text-secondary font-bold hover:text-accent transition">
-                            اعرف المزيد <i class="fas fa-arrow-left mr-2"></i>
-                        </a>
+                        <div class="flex gap-2">
+                            <a href="tel:+966500000000" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-3 rounded-lg text-sm font-bold contact-btn">
+                                <i class="fas fa-phone ml-1"></i>اتصل
+                            </a>
+                            <a href="https://wa.me/966500000000?text=أريد الاستفسار عن خدمة تنظيف الكنب والمفروشات" 
+                               target="_blank" 
+                               class="flex-1 bg-green-500 hover:bg-green-600 text-white text-center py-2 px-3 rounded-lg text-sm font-bold contact-btn">
+                                <i class="fab fa-whatsapp ml-1"></i>واتساب
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
                 <!-- Service Card 3 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden service-card hover-lift" data-aos="fade-up" data-aos-delay="300">
-                    <div class="bg-gradient-to-br from-accent to-primary p-8 text-white">
-                        <div class="text-6xl mb-4">
-                            <i class="fas fa-shield-virus"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2 font-tajawal">تعقيم وتطهير</h3>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 leading-relaxed mb-4">
-                            خدمات تعقيم وتطهير شاملة باستخدام مواد معتمدة صحياً. حماية عائلتك من البكتيريا والفيروسات.
-                        </p>
-                        <a href="services.html#sanitize" class="text-secondary font-bold hover:text-accent transition">
-                            اعرف المزيد <i class="fas fa-arrow-left mr-2"></i>
-                        </a>
-                    </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card">
+                <div class="service-image-container">
+                    <img src="./img/cleaning-apartments-and-villas.png" 
+                        alt="تنظيف الشقق والفلل"
+                        class="service-image">
                 </div>
+
+    <div class="p-5">
+        <!-- عنوان الخدمة -->
+        <div class="flex items-center mb-3">
+            <div class="bg-blue-100 text-blue-600 p-2 rounded-lg ml-3">
+                <i class="fas fa-broom"></i>
+            </div>
+            <h3 class="text-xl font-bold text-blue-800">تنظيف الشقق والفلل</h3>
+        </div>
+
+        <!-- وصف الخدمة -->
+        <p class="text-gray-600 text-sm mb-4">
+            خدمة تنظيف كاملة للشقق والفلل تشمل تنظيف الأرضيات، وتلميع الأسطح، 
+            وتنظيف الحمامات والمطابخ، وترتيب جميع الغرف لضمان نظافة مثالية 
+            تعيد للمكان رونقه وجماله.
+        </p>
+
+        <!-- أزرار الاتصال -->
+        <div class="flex gap-2">
+            <a href="tel:+966500000000" 
+               class="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-3 rounded-lg text-sm font-bold contact-btn">
+                <i class="fas fa-phone ml-1"></i>اتصل
+            </a>
+
+            <a href="https://wa.me/966500000000?text=أريد الاستفسار عن خدمة تنظيف الشقق والفلل" 
+               target="_blank"
+               class="flex-1 bg-green-500 hover:bg-green-600 text-white text-center py-2 px-3 rounded-lg text-sm font-bold contact-btn">
+                <i class="fab fa-whatsapp ml-1"></i>واتساب
+            </a>
+        </div>
+    </div>
+</div>
+
                 
                 <!-- Service Card 4 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden service-card hover-lift" data-aos="fade-up" data-aos-delay="400">
-                    <div class="bg-gradient-to-br from-primary to-accent p-8 text-white">
-                        <div class="text-6xl mb-4">
-                            <i class="fas fa-water"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2 font-tajawal">تنظيف الخزانات</h3>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card">
+                    <div class="service-image-container">
+                        <img src="./img/cleaning-tanks.png" 
+                             alt="تنظيف الخزانات" 
+                             class="service-image">
                     </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 leading-relaxed mb-4">
+                    <div class="p-5">
+                        <div class="flex items-center mb-3">
+                            <div class="bg-blue-100 text-blue-600 p-2 rounded-lg ml-3">
+                                <i class="fas fa-water"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-blue-800">تنظيف الخزانات</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">
                             تنظيف وتعقيم خزانات المياه بمعايير صحية عالية. نضمن لك مياه نظيفة وآمنة لعائلتك.
                         </p>
-                        <a href="services.html#tanks" class="text-secondary font-bold hover:text-accent transition">
-                            اعرف المزيد <i class="fas fa-arrow-left mr-2"></i>
-                        </a>
+                        <div class="flex gap-2">
+                            <a href="tel:+966500000000" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-3 rounded-lg text-sm font-bold contact-btn">
+                                <i class="fas fa-phone ml-1"></i>اتصل
+                            </a>
+                            <a href="https://wa.me/966500000000?text=أريد الاستفسار عن خدمة تنظيف الخزانات" 
+                               target="_blank" 
+                               class="flex-1 bg-green-500 hover:bg-green-600 text-white text-center py-2 px-3 rounded-lg text-sm font-bold contact-btn">
+                                <i class="fab fa-whatsapp ml-1"></i>واتساب
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
                 <!-- Service Card 5 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden service-card hover-lift" data-aos="fade-up" data-aos-delay="500">
-                    <div class="bg-gradient-to-br from-secondary to-primary p-8 text-white">
-                        <div class="text-6xl mb-4">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2 font-tajawal">تنظيف المباني والمنشآت</h3>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 leading-relaxed mb-4">
-                            تنظيف شامل للمباني والمنشآت التجارية والسكنية. خدمة متكاملة تشمل جميع المرافق.
-                        </p>
-                        <a href="services.html#buildings" class="text-secondary font-bold hover:text-accent transition">
-                            اعرف المزيد <i class="fas fa-arrow-left mr-2"></i>
-                        </a>
-                    </div>
-                </div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden service-card">
+    <div class="service-image-container">
+        <img src="./img/cleaning-boards.png" 
+             alt="تنظيف المجالس"
+             class="service-image">
+    </div>
+
+    <div class="p-5">
+        <!-- العنوان -->
+        <div class="flex items-center mb-3">
+            <div class="bg-blue-100 text-blue-600 p-2 rounded-lg ml-3">
+                <i class="fas fa-couch"></i>
+            </div>
+            <h3 class="text-xl font-bold text-blue-800">تنظيف المجالس</h3>
+        </div>
+
+        <!-- الوصف -->
+        <p class="text-gray-600 text-sm mb-4">
+            خدمة تنظيف احترافية للمجالس العربية والحديثة باستخدام أجهزة متطورة 
+            ومواد آمنة لإزالة البقع والروائح وإعادة الأقمشة لحالتها الأصلية.
+        </p>
+
+        <!-- أزرار الاتصال -->
+        <div class="flex gap-2">
+            <a href="tel:+966500000000" 
+               class="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-3 rounded-lg text-sm font-bold contact-btn">
+                <i class="fas fa-phone ml-1"></i>اتصل
+            </a>
+
+            <a href="https://wa.me/966500000000?text=أريد الاستفسار عن خدمة تنظيف المجالس" 
+               target="_blank"
+               class="flex-1 bg-green-500 hover:bg-green-600 text-white text-center py-2 px-3 rounded-lg text-sm font-bold contact-btn">
+                <i class="fab fa-whatsapp ml-1"></i>واتساب
+            </a>
+        </div>
+    </div>
+            </div>
+
                 
                 <!-- Service Card 6 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden service-card hover-lift" data-aos="fade-up" data-aos-delay="600">
-                    <div class="bg-gradient-to-br from-accent to-secondary p-8 text-white">
-                        <div class="text-6xl mb-4">
-                            <i class="fas fa-truck-moving"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2 font-tajawal">نقل وترتيب الأثاث</h3>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 leading-relaxed mb-4">
-                            نقل آمن للأثاث مع خدمات التغليف والترتيب. فريق محترف يضمن سلامة ممتلكاتك.
-                        </p>
-                        <a href="services.html#moving" class="text-secondary font-bold hover:text-accent transition">
-                            اعرف المزيد <i class="fas fa-arrow-left mr-2"></i>
-                        </a>
-                    </div>
-                </div>
+             <div class="bg-white rounded-xl shadow-md overflow-hidden service-card">
+    <div class="service-image-container">
+        <img src="./img/cleaning-offices-and-companies.png" 
+             alt="تنظيف المكاتب والشركات"
+             class="service-image">
+    </div>
+
+    <div class="p-5">
+        <div class="flex items-center mb-3">
+            <div class="bg-blue-100 text-blue-600 p-2 rounded-lg ml-3">
+                <i class="fas fa-building"></i>
+            </div>
+            <h3 class="text-xl font-bold text-blue-800">تنظيف المكاتب والشركات</h3>
+        </div>
+
+        <p class="text-gray-600 text-sm mb-4">
+            تنظيف احترافي للمكاتب والمنشآت الإدارية مع تعقيم الأسطح  
+            وترتيب بيئة العمل لضمان بيئة صحية ومنظمة تزيد الإنتاجية.
+        </p>
+
+        <div class="flex gap-2">
+            <a href="tel:+966500000000" 
+               class="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-3 rounded-lg text-sm font-bold contact-btn">
+                <i class="fas fa-phone ml-1"></i>اتصل
+            </a>
+
+            <a href="https://wa.me/966500000000?text=أريد الاستفسار عن خدمة تنظيف المكاتب والشركات" 
+               target="_blank" 
+               class="flex-1 bg-green-500 hover:bg-green-600 text-white text-center py-2 px-3 rounded-lg text-sm font-bold contact-btn">
+                <i class="fab fa-whatsapp ml-1"></i>واتساب
+            </a>
+        </div>
+    </div>
+</div>
+
             </div>
             
-            <div class="text-center mt-12" data-aos="fade-up">
-                <a href="services.html" class="inline-block bg-primary hover:bg-secondary text-white px-8 py-4 rounded-full text-lg font-bold transition transform hover:scale-105">
+            <div class="text-center mt-10">
+                <a href="services.html" class="inline-block bg-blue-800 hover:bg-blue-900 text-white px-6 py-3 rounded-lg font-bold transition transform hover:scale-105">
                     عرض جميع الخدمات
                 </a>
             </div>
         </div>
     </section>
     
-    <!-- Why Choose Us Section -->
-    <section class="py-20 bg-white">
+   <!-- Why Choose Us Section -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-green-50">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-4 font-tajawal">
-                    لماذا تختار Plaza Clean؟
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-blue-800 mb-4">
+                    لماذا تختار <span class="gradient-text">بلازا كلين</span>؟
                 </h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-secondary to-accent mx-auto mb-6"></div>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-green-500 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    نتميز بتقديم خدمات تنظيف استثنائية تجعلنا الخيار الأول في المدينة المنورة والمنطقة الشرقية
+                </p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="bg-gradient-to-br from-secondary to-accent w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                        <i class="fas fa-certificate text-white text-3xl"></i>
+                <!-- Feature 1 -->
+                <div class="feature-card bg-white rounded-2xl p-8 text-center shadow-lg border border-gray-100">
+                    <div class="feature-icon bg-gradient-to-br from-blue-600 to-blue-800 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg pulse-animation">
+                        <i class="fas fa-user-tie text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-primary mb-2 font-tajawal">فريق محترف ومدرب</h3>
-                    <p class="text-gray-600">فريق عمل مؤهل ومدرب على أعلى معايير الجودة</p>
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">فريق محترف ومدرب</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        فريق عمل مؤهل ومدرب على أعلى معايير الجودة والاحترافية في مجال التنظيف
+                    </p>
+                    <div class="flex justify-center space-x-2">
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">خبرة</span>
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">احترافية</span>
+                    </div>
                 </div>
                 
-                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-                    <div class="bg-gradient-to-br from-accent to-primary w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                        <i class="fas fa-leaf text-white text-3xl"></i>
+                <!-- Feature 2 -->
+                <div class="feature-card bg-white rounded-2xl p-8 text-center shadow-lg border border-gray-100">
+                    <div class="feature-icon bg-gradient-to-br from-green-500 to-green-700 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg pulse-animation">
+                        <i class="fas fa-leaf text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-primary mb-2 font-tajawal">مواد صديقة للبيئة</h3>
-                    <p class="text-gray-600">نستخدم مواد آمنة وصديقة للبيئة وصحتك</p>
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">مواد صديقة للبيئة</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        نستخدم مواد آمنة وصديقة للبيئة تضمن نظافة مثالية مع الحفاظ على صحتك
+                    </p>
+                    <div class="flex justify-center space-x-2">
+                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">آمن</span>
+                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">صحي</span>
+                    </div>
                 </div>
                 
-                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-                    <div class="bg-gradient-to-br from-primary to-secondary w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                        <i class="fas fa-clock text-white text-3xl"></i>
+                <!-- Feature 3 -->
+                <div class="feature-card bg-white rounded-2xl p-8 text-center shadow-lg border border-gray-100">
+                    <div class="feature-icon bg-gradient-to-br from-purple-500 to-purple-700 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg pulse-animation">
+                        <i class="fas fa-clock text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-primary mb-2 font-tajawal">دقة في المواعيد</h3>
-                    <p class="text-gray-600">نلتزم بمواعيدنا ونحترم وقتك الثمين</p>
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">دقة في المواعيد</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        نلتزم بمواعيدنا بدقة متناهية ونحترم وقتك الثمين في كل زيارة
+                    </p>
+                    <div class="flex justify-center space-x-2">
+                        <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">التزام</span>
+                        <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">دقة</span>
+                    </div>
                 </div>
                 
-                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
-                    <div class="bg-gradient-to-br from-secondary to-accent w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                        <i class="fas fa-money-bill-wave text-white text-3xl"></i>
+                <!-- Feature 4 -->
+                <div class="feature-card bg-white rounded-2xl p-8 text-center shadow-lg border border-gray-100">
+                    <div class="feature-icon bg-gradient-to-br from-amber-500 to-amber-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg pulse-animation">
+                        <i class="fas fa-money-bill-wave text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-primary mb-2 font-tajawal">أسعار منافسة</h3>
-                    <p class="text-gray-600">أسعار عادلة ومنافسة مع ضمان الجودة</p>
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">أسعار منافسة</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        نقدم أسعاراً عادلة ومنافسة مع ضمان أعلى مستويات الجودة والكفاءة
+                    </p>
+                    <div class="flex justify-center space-x-2">
+                        <span class="bg-amber-100 text-amber-600 px-3 py-1 rounded-full text-sm">جودة</span>
+                        <span class="bg-amber-100 text-amber-600 px-3 py-1 rounded-full text-sm">توفير</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Features Row -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                <div class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-6 text-white text-center">
+                    <div class="text-4xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">ضمان الجودة</h4>
+                    <p class="text-blue-100">نضمن لك رضا تام عن خدماتنا أو استرداد كامل المبلغ</p>
+                </div>
+                
+                <div class="bg-gradient-to-r from-green-500 to-green-700 rounded-2xl p-6 text-white text-center">
+                    <div class="text-4xl mb-4">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">دعم فني 24/7</h4>
+                    <p class="text-green-100">فريق دعم فني متاح على مدار الساعة لخدمتك</p>
+                </div>
+                
+                <div class="bg-gradient-to-r from-purple-500 to-purple-700 rounded-2xl p-6 text-white text-center">
+                    <div class="text-4xl mb-4">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">خدمة سريعة</h4>
+                    <p class="text-purple-100">نصل إليك في أسرع وقت ممكن في جميع أنحاء المدينة المنورة</p>
+                </div>
+            </div>
+            
+            <!-- CTA Section -->
+            <div class="text-center mt-16">
+                <div class="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto border border-gray-100">
+                    <h3 class="text-2xl md:text-3xl font-bold text-blue-800 mb-4">
+                        جرب الفرق مع <span class="gradient-text">بلازا كلين</span>
+                    </h3>
+                    <p class="text-gray-600 text-lg mb-6 max-w-2xl mx-auto">
+                        انضم إلى آلاف العملاء الراضين عن خدماتنا في المدينة المنورة والمنطقة الشرقية
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="tel:+966500000000" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-bold transition transform hover:scale-105">
+                            <i class="fas fa-phone ml-2"></i>اتصل بنا الآن
+                        </a>
+                        <a href="#booking" class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg text-lg font-bold transition transform hover:scale-105">
+                            <i class="fas fa-calendar-check ml-2"></i>احجز موعد
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
+    <script>
+        // Add scroll animation for feature cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const featureCards = document.querySelectorAll('.feature-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            featureCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
     <!-- Testimonials Section -->
-    <section class="py-20 bg-gradient-to-br from-primary to-secondary text-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 font-tajawal">
-                    ماذا يقول عملاؤنا؟
+    <section class="py-20 dark-gradient-bg text-white relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-5">
+            <div class="absolute top-10 left-10 w-20 h-20 bg-amber-400 rounded-full floating"></div>
+            <div class="absolute top-40 right-20 w-16 h-16 bg-blue-400 rounded-full floating" style="animation-delay: 1s;"></div>
+            <div class="absolute bottom-20 left-1/4 w-12 h-12 bg-green-400 rounded-full floating" style="animation-delay: 2s;"></div>
+            <div class="absolute bottom-10 right-10 w-24 h-24 bg-amber-400 rounded-full floating" style="animation-delay: 1.5s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    ماذا يقول <span class="text-amber-400">عملاؤنا</span>؟
                 </h2>
-                <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
-                <p class="text-xl opacity-90">
-                    رضا عملائنا هو أولويتنا
+                <div class="w-24 h-1 bg-amber-500 mx-auto mb-6"></div>
+                <p class="text-xl opacity-90 max-w-2xl mx-auto">
+                    نفتخر بثقة آلاف العملاء في المدينة المنورة والمنطقة الشرقية الذين اختاروا بلازا كلين لخدمات التنظيف
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                 <!-- Testimonial 1 -->
-                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 hover-lift" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex items-center mb-4">
-                        <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-2xl font-bold ml-4">
-                            أ.س
+                <div class="testimonial-card bg-gray-800 bg-opacity-50 backdrop-blur-md rounded-2xl p-8 border border-gray-700">
+                    <div class="flex items-center mb-6">
+                        <div class="client-avatar w-20 h-20 bg-gradient-to-br from-amber-500 to-amber-700 rounded-full flex items-center justify-center text-2xl font-bold ml-4 shadow-lg">
+                            <span class="text-white">أ.س</span>
                         </div>
-                        <div>
+                        <div class="flex-1">
                             <h4 class="font-bold text-lg">أحمد السعيد</h4>
-                            <p class="text-sm opacity-75">الدمام</p>
+                            <p class="text-sm opacity-75">المدينة المنورة - تنظيف منزل كامل</p>
+                            <div class="flex mt-2 stars">
+                                <i class="fas fa-star text-amber-400"></i>
+                                <i class="fas fa-star text-amber-400"></i>
+                                <i class="fas fa-star text-amber-400"></i>
+                                <i class="fas fa-star text-amber-400"></i>
+                                <i class="fas fa-star text-amber-400"></i>
+                            </div>
                         </div>
                     </div>
-                    <div class="flex mb-4">
-                        <i class="fas fa-star text-accent"></i>
-                        <i class="fas fa-star text-accent"></i>
-                        <i class="fas fa-star text-accent"></i>
-                        <i class="fas fa-star text-accent"></i>
-                        <i class="fas fa-star text-accent"></i>
-                    </div>
-                    <p class="italic leading-relaxed">
+                    <p class="italic leading-relaxed text-gray-200 text-lg">
                         "خدمة ممتازة وفريق محترف. نظفوا منزلي بالكامل وكانت النتيجة أكثر من رائعة! أنصح الجميع بالتعامل معهم."
                     </p>
+                    <div class="mt-4 flex items-center text-sm opacity-75">
+                        <i class="fas fa-calendar ml-2"></i>
+                        <span>منذ أسبوعين</span>
+                    </div>
                 </div>
                 
                 <!-- Testimonial 2 -->
-                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 hover-lift" data-aos="fade-up" data-aos-delay="200">
-                    <div class="flex items-center mb-4">
-                        <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-2xl font-bold ml-4">
-                            ف.م
+                <div class="testimonial-card bg-gray-800 bg-opacity-50 backdrop-blur-md rounded-2xl p-8 border border-gray-700">
+                    <div class="flex items-center mb-6">
+                        <div class="client-avatar w-20 h-20 bg-gradient-to-br from-green-500 to-green-700 rounded-full flex items-center justify-center text-2xl font-bold ml-4 shadow-lg">
+                            <span class="text-white">ف.م</span>
                         </div>
-                        <div>
+                        <div class="flex-1">
                             <h4 class="font-bold text-lg">فاطمة المطيري</h4>
-                            <p class="text-sm opacity-75">الخبر</p>
+                            <p class="text-sm opacity-75">الخبر - تنظيف سجاد</p>
+                            <div class="flex mt-2 stars">
+                                <i class="fas fa-star text-amber-400"></i>
+                                <i class="fas fa-star text-amber-400"></i>
+                                <i class="fas fa-star text-amber-400"></i>
+                                <i class="fas fa-star text-amber-400"></i>
+                                <i class="fas fa-star text-amber-400"></i>
+                            </div>
                         </div>
                     </div>
-                    <div class="flex mb-4">
-                        <i class="fas fa-star text-accent"></i>
-                        <i class="fas fa-star text-accent"></i>
-                        <i class="fas fa-star text-accent"></i>
-                        <i class="fas fa-star text-accent"></i>
-                        <i class="fas fa-star text-accent"></i>
-                    </div>
-                    <p class="italic leading-relaxed">
+                    <p class="italic leading-relaxed text-gray-200 text-lg">
                         "أفضل شركة تنظيف تعاملت معها. دقة في المواعيد واحترافية عالية. السجاد أصبح كأنه جديد!"
                     </p>
+                    <div class="mt-4 flex items-center text-sm opacity-75">
+                        <i class="fas fa-calendar ml-2"></i>
+                        <span>منذ شهر</span>
+                    </div>
                 </div>
                 
                 <!-- Testimonial 3 -->
-                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 hover-lift" data-aos="fade-up" data-aos-delay="300">
-                    <div class="flex items-center mb-4">
-                        <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-2xl font-bold ml-4">
-                            م.غ
+                <div class="testimonial-card bg-gray-800 bg-opacity-50 backdrop-blur-md rounded-2xl p-8 border border-gray-700">
+                    <div class="flex items-center mb-6">
+                        <div class="client-avatar w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-2xl font-bold ml-4 shadow-lg">
+                            <span class="text-white">م.غ</span>
                         </div>
-                        <div>
+                        <div class="flex-1">
                             <h4 class="font-bold text-lg">محمد الغامدي</h4>
-                            <p class="text-sm opacity-75">الظهران</p>
+                            <p class="text-sm opacity-75">الظهران - تنظيف مكتب</p>
+                            <div class="flex mt-2 stars">
+                                <i class="fas fa-star text-amber-400"></i>
+                                <i class="fas fa-star text-amber-400"></i>
+                                <i class="fas fa-star text-amber-400"></i>
+                                <i class="fas fa-star text-amber-400"></i>
+                                <i class="fas fa-star text-amber-400"></i>
+                            </div>
                         </div>
                     </div>
-                    <div class="flex mb-4">
-                        <i class="fas fa-star text-accent"></i>
-                        <i class="fas fa-star text-accent"></i>
-                        <i class="fas fa-star text-accent"></i>
-                        <i class="fas fa-star text-accent"></i>
-                        <i class="fas fa-star text-accent"></i>
-                    </div>
-                    <p class="italic leading-relaxed">
+                    <p class="italic leading-relaxed text-gray-200 text-lg">
                         "نظفوا مكتبنا بشكل مذهل. أصبح المكان يشع نظافة وانتعاش. خدمة ممتازة وسعر مناسب."
                     </p>
+                    <div class="mt-4 flex items-center text-sm opacity-75">
+                        <i class="fas fa-calendar ml-2"></i>
+                        <span>منذ 3 أيام</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stats Section -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                <div class="text-center bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                    <div class="text-3xl font-bold text-amber-400 mb-2">+500</div>
+                    <div class="text-sm opacity-75">عميل راضي</div>
+                </div>
+                <div class="text-center bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                    <div class="text-3xl font-bold text-amber-400 mb-2">+2,000</div>
+                    <div class="text-sm opacity-75">خدمة مكتملة</div>
+                </div>
+                <div class="text-center bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                    <div class="text-3xl font-bold text-amber-400 mb-2">4.9/5</div>
+                    <div class="text-sm opacity-75">تقييم عام</div>
+                </div>
+                <div class="text-center bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                    <div class="text-3xl font-bold text-amber-400 mb-2">98%</div>
+                    <div class="text-sm opacity-75">عملاء يعودون</div>
+                </div>
+            </div>
+            
+            <!-- CTA Section -->
+            <div class="text-center">
+                <div class="bg-gray-800 bg-opacity-50 backdrop-blur-md rounded-2xl p-8 max-w-2xl mx-auto border border-gray-700">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4">
+                        انضم إلى عملائنا <span class="text-amber-400">الراضين</span>
+                    </h3>
+                    <p class="text-lg opacity-90 mb-6">
+                        احصل على نفس تجربة النظافة المثالية التي يحصل عليها آلاف العملاء في المدينة المنورة
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="tel:+966500000000" class="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-lg text-lg font-bold transition transform hover:scale-105 shadow-lg">
+                            <i class="fas fa-phone ml-2"></i>اتصل واحجز الآن
+                        </a>
+                        <a href="#services" class="bg-transparent border-2 border-amber-500 hover:bg-amber-500 text-amber-400 hover:text-white px-8 py-3 rounded-lg text-lg font-bold transition">
+                            <i class="fas fa-sparkles ml-2"></i>استكشف الخدمات
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
+        
+        <!-- Floating Dots -->
+        <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <div class="w-3 h-3 bg-amber-400 rounded-full pulse-dot"></div>
+            <div class="w-3 h-3 bg-amber-400 rounded-full pulse-dot" style="animation-delay: 0.5s;"></div>
+            <div class="w-3 h-3 bg-amber-400 rounded-full pulse-dot" style="animation-delay: 1s;"></div>
+        </div>
     </section>
+
+    <script>
+        // Add scroll animation for testimonial cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const testimonialCards = document.querySelectorAll('.testimonial-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            testimonialCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
     
-    <!-- CTA Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="bg-gradient-to-br from-primary via-secondary to-accent rounded-3xl p-12 text-center text-white" data-aos="fade-up">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6 font-tajawal">
-                    جاهز لتجربة النظافة الحقيقية؟
+     <!-- Excellence in Cleanliness Section -->
+    <section class="py-20 relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-10">
+            <div class="absolute top-10 right-10 w-16 h-16 bg-blue-400 rounded-full floating"></div>
+            <div class="absolute top-40 left-20 w-20 h-20 bg-green-400 rounded-full floating" style="animation-delay: 1s;"></div>
+            <div class="absolute bottom-20 right-1/4 w-12 h-12 bg-blue-300 rounded-full floating" style="animation-delay: 2s;"></div>
+            <div class="absolute bottom-10 left-10 w-24 h-24 bg-green-300 rounded-full floating" style="animation-delay: 1.5s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                    <span class="gradient-text">تميزنا</span> في عالم النظافة
                 </h2>
-                <p class="text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
-                    احجز موعدك الآن واستمتع بخصم 20% على أول خدمة!
+                <div class="w-24 h-1 bg-gradient-to-r from-green-500 to-blue-600 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    نقدم مفهوماً جديداً للنظافة يتجاوز التنظيف العادي إلى تجربة استثنائية تلامس كل تفصيلة
                 </p>
-                <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-                    <a href="booking.html" class="bg-accent hover:bg-white hover:text-primary text-white px-10 py-4 rounded-full text-lg font-bold transition transform hover:scale-105 shadow-2xl">
-                        <i class="fas fa-calendar-check ml-2"></i>
-                        احجز الآن واحصل على الخصم
-                    </a>
-                    <a href="tel:0132345678" class="bg-white hover:bg-accent text-primary hover:text-white px-10 py-4 rounded-full text-lg font-bold transition transform hover:scale-105 shadow-2xl">
-                        <i class="fas fa-phone ml-2"></i>
-                        اتصل بنا: 013-234-5678
-                    </a>
+            </div>
+            
+            <!-- Main Features Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Feature 1 -->
+                <div class="clean-feature-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="feature-icon bg-gradient-to-br from-green-500 to-green-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg pulse-animation shine-effect">
+                        <i class="fas fa-spray-can-sparkles text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">تعقيم شمولي ذكي</h3>
+                    <p class="text-gray-600 leading-relaxed text-center mb-4">
+                        نستخدم تقنيات التعقيم بالضباب النانوي الذي يصل إلى كل زاوية وينظف حتى المساحات غير المرئية
+                    </p>
+                    <div class="flex justify-center space-x-2">
+                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">تقنية متطورة</span>
+                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">تعقيم شامل</span>
+                    </div>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="clean-feature-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="feature-icon bg-gradient-to-br from-blue-500 to-blue-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg pulse-animation shine-effect">
+                        <i class="fas fa-wind text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">تنظيف بالبخار المتقدم</h3>
+                    <p class="text-gray-600 leading-relaxed text-center mb-4">
+                        بخار عالي الحرارة يقتل الجراثيم وينظف بعمق دون استخدام مواد كيميائية ضارة
+                    </p>
+                    <div class="flex justify-center space-x-2">
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">بخار عالي</span>
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">صديق للبيئة</span>
+                    </div>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="clean-feature-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="feature-icon bg-gradient-to-br from-purple-500 to-purple-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg pulse-animation shine-effect">
+                        <i class="fas fa-microscope text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">فحص جودة دقيق</h3>
+                    <p class="text-gray-600 leading-relaxed text-center mb-4">
+                        نستخدم أجهزة فحص متطورة لضمان جودة النظافة ونسبة التعقيم التي تتجاوز 99.9%
+                    </p>
+                    <div class="flex justify-center space-x-2">
+                        <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">فحص دقيق</span>
+                        <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">جودة مضمونة</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Specialized Cleaning Methods -->
+            <div class="bg-white rounded-2xl shadow-xl p-8 mb-12 border border-gray-200">
+                <div class="text-center mb-8">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">طرق تنظيف <span class="gradient-text">حصرية</span></h3>
+                    <p class="text-gray-600 text-lg">نطور أساليب تنظيف مبتكرة تناسب كل نوع من الأسطح والمساحات</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-green-100 text-green-600 p-3 rounded-xl">
+                            <i class="fas fa-seedling text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 text-lg mb-2">تنظيف عضوي آمن</h4>
+                            <p class="text-gray-600">مواد تنظيف عضوية 100% آمنة للأطفال والحيوانات الأليفة</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-blue-100 text-blue-600 p-3 rounded-xl">
+                            <i class="fas fa-bolt text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 text-lg mb-2">تنظيف سريع المفعول</h4>
+                            <p class="text-gray-600">تقنيات تنظيف سريعة تجف في دقائق ولا تترك آثاراً</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-purple-100 text-purple-600 p-3 rounded-xl">
+                            <i class="fas fa-shield-alt text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 text-lg mb-2">حماية طويلة الأمد</h4>
+                            <p class="text-gray-600">طبقة حماية تمنع تراكم الأتربة والجراثيم لفترات طويلة</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-amber-100 text-amber-600 p-3 rounded-xl">
+                            <i class="fas fa-magic text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 text-lg mb-2">إزالة البقع المستعصية</h4>
+                            <p class="text-gray-600">حلول متخصصة لإزالة أصعب البقع دون إتلاف الأسطح</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Technology Showcase -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-6">تقنيات <span class="gradient-text">ثورية</span> في النظافة</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-md">
+                            <div class="bg-blue-500 text-white p-3 rounded-lg">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mr-3">تكنولوجيا الروبوتات</h4>
+                                <p class="text-gray-600 text-sm mr-3">روبوتات تنظيف ذكية للوصول إلى الأماكن الصعبة</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-md">
+                            <div class="bg-green-500 text-white p-3 rounded-lg">
+                                <i class="fas fa-filter"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mr-3">أنظمة ترشيح متطورة</h4>
+                                <p class="text-gray-600 text-sm mr-3">تصفية الهواء والماء أثناء عملية التنظيف</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-md">
+                            <div class="bg-purple-500 text-white p-3 rounded-lg">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mr-3">تحليل بيانات النظافة</h4>
+                                <p class="text-gray-600 text-sm mr-3">تتبع وتحليل بيانات النظافة لتحسين الخدمة</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-gradient-to-br from-blue-500 to-green-500 rounded-2xl p-8 text-white shadow-2xl">
+                        <div class="text-6xl mb-4 sparkle">
+                            <i class="fas fa-sparkles"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4">نظافة تستشعرها</h4>
+                        <p class="text-blue-100 mb-6">لا تراها بعينك فقط، بل تشعر بها في هواء منعش وأسطح لامعة ورائحة نقية</p>
+                        <div class="bg-white bg-opacity-20 rounded-lg p-4 backdrop-blur-sm">
+                            <p class="text-sm">"تجربة نظافة تتجاوز المظهر إلى الشعور"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Final CTA -->
+            <div class="text-center">
+                <div class="bg-gradient-to-r from-blue-600 to-green-600 rounded-2xl p-8 text-white shadow-2xl">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4">جرب الفرق الذي <span class="text-amber-300">تشعر به</span></h3>
+                    <p class="text-lg mb-6 opacity-90">انضم إلى آلاف العائلات والشركات في المدينة المنورة الذين اختاروا تجربة النظافة المميزة</p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="tel:+966500000000" class="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-lg text-lg font-bold transition transform hover:scale-105">
+                            <i class="fas fa-phone ml-2"></i>احجز تجربة النظافة
+                        </a>
+                        <a href="#services" class="bg-white bg-opacity-20 hover:bg-white hover:text-blue-600 text-white px-8 py-3 rounded-lg text-lg font-bold transition backdrop-blur-sm">
+                            <i class="fas fa-list ml-2"></i>استعرض الخدمات
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+        // Add scroll animation for feature cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const featureCards = document.querySelectorAll('.clean-feature-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            featureCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
     
     <!-- Footer -->
     <footer class="bg-dark text-white py-12">
@@ -599,14 +1353,14 @@
                 <!-- About -->
                 <div>
                     <div class="flex items-center space-x-3 space-x-reverse mb-4">
-                        <div class="text-3xl">✨</div>
+                         <img src="./img/logo.png" class="w-16 h-16" alt="لوجو شركة بلازا كلين">
                         <div>
-                            <h3 class="text-xl font-bold font-tajawal">Plaza Clean</h3>
+                            <h3 class="text-xl font-bold font-tajawal">بلازا كلين</h3>
                             <p class="text-sm text-secondary">نخلي أماكنك تبرق</p>
                         </div>
                     </div>
                     <p class="text-gray-400 leading-relaxed">
-                        شركتك الموثوقة للتنظيف الشامل في الدمام والمنطقة الشرقية.
+                        شركتك الموثوقة للتنظيف الشامل في المدينة المنورة والمنطقة الشرقية.
                     </p>
                 </div>
                 
@@ -640,7 +1394,7 @@
                     <ul class="space-y-3">
                         <li class="flex items-start">
                             <i class="fas fa-map-marker-alt text-secondary ml-3 mt-1"></i>
-                            <span class="text-gray-400">طريق الملك فهد، حي الشاطئ، الدمام 32413</span>
+                            <span class="text-gray-400">طريق الملك فهد، حي الشاطئ، المدينة المنورة 32413</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-phone text-secondary ml-3"></i>
@@ -685,8 +1439,8 @@
             
             <!-- Copyright -->
             <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 Plaza Clean. جميع الحقوق محفوظة.</p>
-                <p class="mt-2">صنع بـ <i class="fas fa-heart text-red-500"></i> في الدمام، السعودية</p>
+                <p>&copy; 2024 بلازا كلين. جميع الحقوق محفوظة.</p>
+                <p class="mt-2">صنع بـ <i class="fas fa-heart text-red-500"></i> في المدينة المنورة، السعودية</p>
             </div>
         </div>
     </footer>
@@ -707,13 +1461,13 @@
     {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "Plaza Clean",
+        "name": "بلازا كلين",
         "image": "https://plazaclean-dammam.sa/images/logo.png",
-        "description": "شركة تنظيف احترافية في الدمام تقدم خدمات تنظيف شاملة للمنازل والمكاتب والمنشآت",
+        "description": "شركة تنظيف احترافية في المدينة المنورة تقدم خدمات تنظيف شاملة للمنازل والمكاتب والمنشآت",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "طريق الملك فهد، حي الشاطئ",
-            "addressLocality": "الدمام",
+            "addressLocality": "المدينة المنورة",
             "postalCode": "32413",
             "addressCountry": "SA"
         },
