@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="مدونة Plaza Clean - نصائح ومقالات عن التنظيف والنظافة">
     <title>المدونة | Plaza Clean</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E✨%3C/text%3E%3C/svg%3E">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E✨%3C/text%3E%3C/svg%3E">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -14,152 +18,515 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { primary: '#1e3a5f', secondary: '#14b8a6', accent: '#f59e0b', dark: '#0f172a' },
+                    colors: { primary: '#3fa0d9', secondary: '#7db081', accent: '#f59e0b', dark: '#0f172a' },
                     fontFamily: { 'cairo': ['Cairo', 'sans-serif'], 'tajawal': ['Tajawal', 'sans-serif'] }
                 }
             }
         }
     </script>
     <style>
-        body { font-family: 'Cairo', sans-serif; }
-        .hero-gradient { background: linear-gradient(135deg, rgba(30, 58, 95, 0.95) 0%, rgba(20, 184, 166, 0.85) 100%); }
-        .pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
-        @keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 20px rgba(20, 184, 166, 0.5); } 50% { box-shadow: 0 0 40px rgba(20, 184, 166, 0.8); } }
-        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 30px; left: 30px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 2px 20px rgba(0,0,0,0.3); z-index: 1000; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; animation: pulse 2s infinite; }
-        .whatsapp-float:hover { transform: scale(1.1); background-color: #128c7e; }
-        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+
+           .hero-gradient {
+            background: rgba(124, 175, 128, 0.6);
+        }
+
+        .pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(20, 184, 166, 0.5);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(20, 184, 166, 0.8);
+            }
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            left: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #128c7e;
+        }
+ .call-float {
+            position: fixed;
+            bottom: 30px; 
+            right: 20px;
+            background-color: #3fa0d9; 
+            color: #fff;
+            font-size: 25px;
+            width: 55px;
+            height: 55px;
+            line-height: 55px;
+            text-align: center;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            z-index: 999;
+            transition: 0.3s ease;
+        }
+
+        .call-float:hover {
+            transform: scale(1.15);
+            background-color: #2d8bc7;
+        }
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
     </style>
 </head>
+
 <body class="bg-gray-50">
-    
-    <!-- Navbar (نفس البنية من الصفحات السابقة - مختصر هنا) -->
+
+    <!-- Navbar -->
     <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
                 <div class="flex items-center space-x-3 space-x-reverse">
-                    <div class="text-4xl">✨</div>
-                    <div><h1 class="text-2xl font-bold text-primary font-tajawal">Plaza Clean</h1><p class="text-xs text-secondary">نخلي أماكنك تبرق</p></div>
+                    <img src="./img/logo.png" class="w-16 h-16" alt="">
+                    <div>
+                        <h1 class="text-2xl font-bold text-primary font-tajawal">بلازا كلين</h1>
+                        <p class="text-xs text-secondary">نخلي أماكنك تبرق</p>
+                    </div>
                 </div>
+
                 <ul class="hidden md:flex space-x-8 space-x-reverse font-tajawal">
                     <li><a href="index.html" class="text-gray-700 hover:text-secondary transition">الرئيسية</a></li>
-                    <li><a href="services.html" class="text-gray-700 hover:text-secondary transition">الخدمات</a></li>
-                    <li><a href="gallery.html" class="text-gray-700 hover:text-secondary transition">معرض الأعمال</a></li>
-                    <li><a href="about.html" class="text-gray-700 hover:text-secondary transition">من نحن</a></li>
-                    <li><a href="pricing.html" class="text-gray-700 hover:text-secondary transition">الأسعار</a></li>
-                    <li><a href="blog.html" class="text-primary hover:text-secondary transition font-semibold">المدونة</a></li>
+                    <li><a href="services.html" class="text-gray-700 hover:text-secondary transition ">الخدمات</a></li>
+                    <li><a href="gallery.html" class="text-gray-700 hover:text-secondary transition ">معرض الأعمال</a>
+                    </li>
+                    <li><a href="about.html" class="text-gray-700 hover:text-secondary transition ">من نحن</a></li>
+                    <li><a href="blog.html"
+                            class="text-primary hover:text-secondary transition font-semibold">المدونة</a></li>
                     <li><a href="contact.html" class="text-gray-700 hover:text-secondary transition">اتصل بنا</a></li>
                 </ul>
-                <a href="booking.html" class="hidden md:block bg-secondary hover:bg-accent text-white px-6 py-3 rounded-full font-bold transition transform hover:scale-105 pulse-glow">احجز الآن</a>
-                <button id="mobile-menu-btn" class="md:hidden text-primary focus:outline-none"><i class="fas fa-bars text-2xl"></i></button>
+
+                <a href="booking.html"
+                    class="hidden md:block bg-secondary hover:bg-accent text-white px-5 py-2 rounded-full font-bold transition transform hover:scale-105 pulse-glow text-sm">
+                    احجز الآن
+                </a>
+
+                <button id="mobile-menu-btn" class="md:hidden text-primary focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
             </div>
-            <div id="mobile-menu" class="hidden md:hidden pb-4"><ul class="space-y-3 font-tajawal"><li><a href="index.html" class="block text-gray-700 hover:text-secondary transition">الرئيسية</a></li><li><a href="services.html" class="block text-gray-700 hover:text-secondary transition">الخدمات</a></li><li><a href="gallery.html" class="block text-gray-700 hover:text-secondary transition">معرض الأعمال</a></li><li><a href="about.html" class="block text-gray-700 hover:text-secondary transition">من نحن</a></li><li><a href="pricing.html" class="block text-gray-700 hover:text-secondary transition">الأسعار</a></li><li><a href="blog.html" class="block text-primary font-semibold hover:text-secondary transition">المدونة</a></li><li><a href="contact.html" class="block text-gray-700 hover:text-secondary transition">اتصل بنا</a></li><li><a href="booking.html" class="block bg-secondary text-white px-6 py-3 rounded-full font-bold text-center">احجز الآن</a></li></ul></div>
+
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <ul class="space-y-3 font-tajawal">
+                    <li><a href="index.html" class="block text-gray-700 hover:text-secondary transition">الرئيسية</a>
+                    </li>
+                    <li><a href="services.html" class="block text-gray-700  hover:text-secondary transition">الخدمات</a>
+                    </li>
+                    <li><a href="gallery.html" class="block text-gray-700 hover:text-secondary transition ">معرض
+                            الأعمال</a></li>
+                    <li><a href="about.html" class="block text-gray-700 hover:text-secondary transition">من نحن</a></li>
+                    <li><a href="blog.html" class="text-primary hover:text-secondary ">المدونة</a></li>
+                    <li><a href="contact.html" class="block text-gray-700 hover:text-secondary transition">اتصل بنا</a>
+                    </li>
+                    <li><a href="booking.html"
+                            class="block bg-secondary text-white px-5 py-2 rounded-full font-bold text-center text-sm">احجز
+                            الآن</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
-    
-    <!-- Hero -->
-    <section class="relative h-96 flex items-center justify-center overflow-hidden mt-20">
-        <div class="absolute inset-0 z-0"><img src="https://images.unsplash.com/photo-1455849318743-b2233052fcff?w=1920&h=600&fit=crop" alt="المدونة" class="w-full h-full object-cover"><div class="absolute inset-0 hero-gradient"></div></div>
-        <div class="relative z-10 text-center text-white px-4" data-aos="fade-up"><h1 class="text-5xl md:text-6xl font-bold mb-4 font-tajawal">مدونة Plaza Clean</h1><p class="text-xl md:text-2xl">نصائح ومقالات مفيدة عن النظافة</p></div>
+
+    <!-- Hero Section -->
+    <section
+        class="relative h-[800px] flex items-center justify-center overflow-hidden mt-20 rounded-b-[100px] md:rounded-b-[200px]">
+
+        <!-- Background Video/Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="./img/pexels-idilcelikler-34873909.jpg" alt="المدونة والمقالات" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center text-white px-4" data-aos="fade-up">
+            <div class="floating mb-6">
+                <i class="fas fa-pen-fancy text-6xl text-accent"></i>
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 font-tajawal leading-tight">
+                المدونة والمقالات <br>أفكار ومعرفة نشاركها معكم
+            </h1>
+
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
+                نوفر لكم مقالات غنية بالمعلومات، نصائح، شروحات، ودروس تساعدكم في فهم المزيد عن خدماتنا
+                وكل ما يهمكم في عالم التنظيف والصيانة وأكثر.
+            </p>
+
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <a href="#articles"
+                    class="bg-[#679fd6] text-white px-10 py-4 rounded-full text-lg font-bold transition transform hover:scale-105 shadow-2xl">
+                    <i class="fas fa-book-open ml-2"></i>
+                    تصفح المقالات
+                </a>
+                <a href="contact.html"
+                    class="bg-white hover:bg-gray-100 text-primary px-10 py-4 rounded-full text-lg font-bold transition transform hover:scale-105 shadow-2xl">
+                    <i class="fas fa-envelope ml-2"></i>
+                    تواصل معنا
+                </a>
+            </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-3 gap-6 max-w-3xl mx-auto mt-16" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6">
+                    <div class="text-4xl font-bold text-accent mb-2">+150</div>
+                    <div class="text-sm">مقال منشور</div>
+                </div>
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6">
+                    <div class="text-4xl font-bold text-accent mb-2">+10</div>
+                    <div class="text-sm">تصنيفات مختلفة</div>
+                </div>
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6">
+                    <div class="text-4xl font-bold text-accent mb-2">آراء</div>
+                    <div class="text-sm">تحليل وخبرات متخصصة</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-white text-3xl"></i>
+        </div>
     </section>
+
+<!-- Articles Importance Section -->
+<section class="py-24 bg-white relative overflow-hidden">
+    <!-- Background Elements -->
+    <div class="absolute top-0 left-0 w-full h-full opacity-5">
+        <div class="absolute top-10 right-10 w-32 h-32 bg-primary rounded-full"></div>
+        <div class="absolute top-1/3 left-1/4 w-20 h-20 bg-secondary rounded-full"></div>
+        <div class="absolute bottom-20 right-1/3 w-16 h-16 bg-accent rounded-full"></div>
+        <div class="absolute bottom-10 left-20 w-24 h-24 bg-primary rounded-full"></div>
+    </div>
     
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-6xl mx-auto">
+            <!-- Main Header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="inline-block bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-full text-sm font-bold mb-6 font-tajawal">
+                    📚 مركز المعرفة
+                </span>
+                <h2 class="text-5xl font-bold text-primary mb-6 font-tajawal leading-tight">
+                    أهمية المقالات والمعرفة في عالم التنظيف
+                </h2>
+                <div class="w-32 h-1 bg-gradient-to-r from-secondary to-accent mx-auto mb-8"></div>
+                <p class="text-xl text-gray-700 mb-12 max-w-4xl mx-auto leading-relaxed">
+                    المقالات ليست مجرد نصوص، بل وسيلة لنشر المعرفة وتعزيز الوعي وتقديم 
+                    معلومات قيّمة تساعدك على اتخاذ قرارات صحيحة. من خلال مقالاتنا، نشارك 
+                    الخبرات، النصائح، والإرشادات التي تضيف فائدة حقيقية لكل قارئ.
+                </p>
+            </div>
+
+            <!-- Benefits Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" data-aos="fade-up">
+                <div class="bg-gradient-to-br from-primary to-blue-600 text-white rounded-2xl p-8 text-center shadow-lg hover-lift">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center text-2xl text-white mb-6 mx-auto">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-tajawal">نشر الوعي</h3>
+                    <p class="opacity-90 leading-relaxed">
+                        نقدم معلومات دقيقة تساعدك على فهم أهمية النظافة وكيفية الحفاظ عليها بطريقة صحيحة
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-br from-secondary to-green-600 text-white rounded-2xl p-8 text-center shadow-lg hover-lift">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center text-2xl text-white mb-6 mx-auto">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-tajawal">تعليم مستمر</h3>
+                    <p class="opacity-90 leading-relaxed">
+                        نشارك أحدث التقنيات والطرق المبتكرة في التنظيف لمساعدتك في الحصول على أفضل النتائج
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-br from-primary to-purple-600 text-white rounded-2xl p-8 text-center shadow-lg hover-lift">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center text-2xl text-white mb-6 mx-auto">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-tajawal">نصائح آمنة</h3>
+                    <p class="opacity-90 leading-relaxed">
+                        نقدم إرشادات حول الاستخدام الآمن لمنتجات التنظيف وحماية عائلتك من المخاطر المحتملة
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-br from-secondary to-teal-600 text-white rounded-2xl p-8 text-center shadow-lg hover-lift">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center text-2xl text-white mb-6 mx-auto">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-tajawal">بيئة مستدامة</h3>
+                    <p class="opacity-90 leading-relaxed">
+                        نركز على الطرق الصديقة للبيئة والمواد الطبيعية للحفاظ على صحتك وكوكبنا
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-br from-accent to-amber-600 text-white rounded-2xl p-8 text-center shadow-lg hover-lift">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center text-2xl text-white mb-6 mx-auto">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-tajawal">دعم مجتمعي</h3>
+                    <p class="opacity-90 leading-relaxed">
+                        نشارك تجارب حقيقية ونصائح عملية تساعد في بناء مجتمع أكثر وعياً بالنظافة
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-br from-primary to-blue-700 text-white rounded-2xl p-8 text-center shadow-lg hover-lift">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center text-2xl text-white mb-6 mx-auto">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 font-tajawal">توفير المال</h3>
+                    <p class="opacity-90 leading-relaxed">
+                        نقدم نصائح عملية تساعدك على توفير المال والوقت في عمليات التنظيف اليومية
+                    </p>
+                </div>
+            </div>
+
+            <!-- Statistics -->
+            <div class="bg-gradient-to-r from-primary to-secondary text-white rounded-3xl p-12 shadow-xl mb-16" data-aos="fade-up">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-4xl font-bold mb-2">+500</div>
+                        <div class="opacity-90">مقال متخصص</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold mb-2">+50K</div>
+                        <div class="opacity-90">قارئ شهرياً</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold mb-2">98%</div>
+                        <div class="opacity-90">رضا القراء</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold mb-2">24/7</div>
+                        <div class="opacity-90">محتوى متجدد</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Topics -->
+            <div class="mb-16" data-aos="fade-up">
+                <h3 class="text-3xl font-bold text-primary text-center mb-12 font-tajawal">مواضيع نغطيها</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="bg-gradient-to-r from-primary to-blue-600 text-white px-6 py-3 rounded-full text-sm font-medium shadow-md border border-blue-200">
+                        تنظيف السجاد والموكيت
+                    </span>
+                    <span class="bg-gradient-to-r from-secondary to-green-600 text-white px-6 py-3 rounded-full text-sm font-medium shadow-md border border-green-200">
+                        العناية بالأثاث
+                    </span>
+                    <span class="bg-gradient-to-r from-primary to-purple-600 text-white px-6 py-3 rounded-full text-sm font-medium shadow-md border border-purple-200">
+                        التنظيف الصحي
+                    </span>
+                    <span class="bg-gradient-to-r from-secondary to-teal-600 text-white px-6 py-3 rounded-full text-sm font-medium shadow-md border border-teal-200">
+                        المواد الطبيعية
+                    </span>
+                    <span class="bg-gradient-to-r from-accent to-amber-600 text-white px-6 py-3 rounded-full text-sm font-medium shadow-md border border-amber-200">
+                        نصائح التنظيف اليومي
+                    </span>
+                    <span class="bg-gradient-to-r from-primary to-blue-700 text-white px-6 py-3 rounded-full text-sm font-medium shadow-md border border-blue-300">
+                        تنظيف الخزانات
+                    </span>
+                </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="text-center" data-aos="fade-up">
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <a href="#articles"
+                        class="inline-flex items-center bg-gradient-to-r from-primary to-blue-600 hover:from-blue-600 hover:to-primary text-white px-10 py-4 rounded-full text-lg font-bold transition transform hover:scale-105 shadow-2xl">
+                        <i class="fas fa-book-open ml-2"></i>
+                        اكتشف مقالاتنا
+                    </a>
+                    <a href="#subscribe"
+                        class="inline-flex items-center bg-gradient-to-r from-secondary to-green-600 hover:from-green-600 hover:to-secondary text-white px-10 py-4 rounded-full text-lg font-bold transition transform hover:scale-105 shadow-2xl">
+                        <i class="fas fa-bell ml-2"></i>
+                        اشترك في النشرة
+                    </a>
+                </div>
+                <p class="text-gray-600 mt-6 text-sm">
+                    احصل على أحدث المقالات والنصائح مباشرة في بريدك الإلكتروني
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .hover-lift {
+        transition: all 0.3s ease;
+    }
+    
+    .hover-lift:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+</style>
     <!-- Blog Posts -->
     <section class="py-20">
         <div class="container mx-auto px-4">
             <!-- Search Bar -->
             <div class="max-w-2xl mx-auto mb-12" data-aos="fade-up">
                 <div class="relative">
-                    <input type="text" id="blog-search" placeholder="ابحث في المقالات..." class="w-full px-6 py-4 pr-12 rounded-full border-2 border-gray-300 focus:border-secondary focus:outline-none text-lg">
-                    <i class="fas fa-search absolute left-6 top-1/2 transform -translate-y-1/2 text-gray-400 text-xl"></i>
+                    <input type="text" id="blog-search" placeholder="ابحث في المقالات..."
+                        class="w-full px-6 py-4 pr-12 rounded-full border-2 border-gray-300 focus:border-secondary focus:outline-none text-lg">
+                    <i
+                        class="fas fa-search absolute left-6 top-1/2 transform -translate-y-1/2 text-gray-400 text-xl"></i>
                 </div>
             </div>
-            
+
             <!-- Blog Grid -->
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Post 1 -->
-                <article class="blog-post bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition" data-aos="fade-up">
-                    <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?w=600&h=400&fit=crop" alt="تنظيف المنزل" class="w-full h-48 object-cover">
+                <article class="blog-post bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition"
+                    data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?w=600&h=400&fit=crop"
+                        alt="تنظيف المنزل" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
                             <span><i class="far fa-calendar ml-1"></i>15 نوفمبر 2024</span>
                             <span><i class="far fa-clock ml-1"></i>5 دقائق</span>
                         </div>
-                        <h2 class="blog-title text-2xl font-bold text-primary mb-3 font-tajawal">10 نصائح لتنظيف المنزل بسرعة</h2>
-                        <p class="blog-excerpt text-gray-600 mb-4">اكتشف أسرار التنظيف السريع والفعال للمنزل في وقت قياسي. نصائح مجربة ومضمونة...</p>
-                        <a href="#" class="text-secondary font-bold hover:text-accent transition">اقرأ المزيد <i class="fas fa-arrow-left mr-2"></i></a>
+                        <h2 class="blog-title text-2xl font-bold text-primary mb-3 font-tajawal">10 نصائح لتنظيف المنزل
+                            بسرعة</h2>
+                        <p class="blog-excerpt text-gray-600 mb-4">اكتشف أسرار التنظيف السريع والفعال للمنزل في وقت
+                            قياسي. نصائح مجربة ومضمونة...</p>
+                        <a href="#" class="text-secondary font-bold hover:text-accent transition">اقرأ المزيد <i
+                                class="fas fa-arrow-left mr-2"></i></a>
                     </div>
                 </article>
-                
+
                 <!-- Post 2 -->
-                <article class="blog-post bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=400&fit=crop" alt="تنظيف السجاد" class="w-full h-48 object-cover">
+                <article class="blog-post bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=400&fit=crop"
+                        alt="تنظيف السجاد" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
                             <span><i class="far fa-calendar ml-1"></i>10 نوفمبر 2024</span>
                             <span><i class="far fa-clock ml-1"></i>7 دقائق</span>
                         </div>
-                        <h2 class="blog-title text-2xl font-bold text-primary mb-3 font-tajawal">كيف تحافظ على نظافة السجاد؟</h2>
-                        <p class="blog-excerpt text-gray-600 mb-4">دليل شامل للعناية بالسجاد والموكيت. طرق فعالة لإزالة البقع والحفاظ على الألوان...</p>
-                        <a href="#" class="text-secondary font-bold hover:text-accent transition">اقرأ المزيد <i class="fas fa-arrow-left mr-2"></i></a>
+                        <h2 class="blog-title text-2xl font-bold text-primary mb-3 font-tajawal">كيف تحافظ على نظافة
+                            السجاد؟</h2>
+                        <p class="blog-excerpt text-gray-600 mb-4">دليل شامل للعناية بالسجاد والموكيت. طرق فعالة لإزالة
+                            البقع والحفاظ على الألوان...</p>
+                        <a href="#" class="text-secondary font-bold hover:text-accent transition">اقرأ المزيد <i
+                                class="fas fa-arrow-left mr-2"></i></a>
                     </div>
                 </article>
-                
+
                 <!-- Post 3 -->
-                <article class="blog-post bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&h=400&fit=crop" alt="التعقيم" class="w-full h-48 object-cover">
+                <article class="blog-post bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&h=400&fit=crop"
+                        alt="التعقيم" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
                             <span><i class="far fa-calendar ml-1"></i>5 نوفمبر 2024</span>
                             <span><i class="far fa-clock ml-1"></i>6 دقائق</span>
                         </div>
-                        <h2 class="blog-title text-2xl font-bold text-primary mb-3 font-tajawal">أهمية التعقيم المنزلي المنتظم</h2>
-                        <p class="blog-excerpt text-gray-600 mb-4">لماذا التعقيم ضروري؟ وما هي أفضل الطرق للحفاظ على بيئة صحية وآمنة...</p>
-                        <a href="#" class="text-secondary font-bold hover:text-accent transition">اقرأ المزيد <i class="fas fa-arrow-left mr-2"></i></a>
+                        <h2 class="blog-title text-2xl font-bold text-primary mb-3 font-tajawal">أهمية التعقيم المنزلي
+                            المنتظم</h2>
+                        <p class="blog-excerpt text-gray-600 mb-4">لماذا التعقيم ضروري؟ وما هي أفضل الطرق للحفاظ على
+                            بيئة صحية وآمنة...</p>
+                        <a href="#" class="text-secondary font-bold hover:text-accent transition">اقرأ المزيد <i
+                                class="fas fa-arrow-left mr-2"></i></a>
                     </div>
                 </article>
-                
+
                 <!-- Post 4 -->
-                <article class="blog-post bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition" data-aos="fade-up">
-                    <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=600&h=400&fit=crop" alt="المطبخ" class="w-full h-48 object-cover">
+                <article class="blog-post bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition"
+                    data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=600&h=400&fit=crop"
+                        alt="المطبخ" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
                             <span><i class="far fa-calendar ml-1"></i>1 نوفمبر 2024</span>
                             <span><i class="far fa-clock ml-1"></i>4 دقائق</span>
                         </div>
-                        <h2 class="blog-title text-2xl font-bold text-primary mb-3 font-tajawal">طرق فعالة لتنظيف المطبخ</h2>
-                        <p class="blog-excerpt text-gray-600 mb-4">المطبخ النظيف هو مطبخ صحي. تعرف على أفضل الطرق لإزالة الدهون والأوساخ...</p>
-                        <a href="#" class="text-secondary font-bold hover:text-accent transition">اقرأ المزيد <i class="fas fa-arrow-left mr-2"></i></a>
+                        <h2 class="blog-title text-2xl font-bold text-primary mb-3 font-tajawal">طرق فعالة لتنظيف المطبخ
+                        </h2>
+                        <p class="blog-excerpt text-gray-600 mb-4">المطبخ النظيف هو مطبخ صحي. تعرف على أفضل الطرق لإزالة
+                            الدهون والأوساخ...</p>
+                        <a href="#" class="text-secondary font-bold hover:text-accent transition">اقرأ المزيد <i
+                                class="fas fa-arrow-left mr-2"></i></a>
                     </div>
                 </article>
-                
+
                 <!-- Post 5 -->
-                <article class="blog-post bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1527515545081-5db817172677?w=600&h=400&fit=crop" alt="الحمام" class="w-full h-48 object-cover">
+                <article class="blog-post bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1527515545081-5db817172677?w=600&h=400&fit=crop"
+                        alt="الحمام" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
                             <span><i class="far fa-calendar ml-1"></i>25 أكتوبر 2024</span>
                             <span><i class="far fa-clock ml-1"></i>5 دقائق</span>
                         </div>
-                        <h2 class="blog-title text-2xl font-bold text-primary mb-3 font-tajawal">أسرار تنظيف الحمام بلمعان</h2>
-                        <p class="blog-excerpt text-gray-600 mb-4">حمام نظيف ولامع في خطوات بسيطة. نصائح للقضاء على الجير والبقع الصعبة...</p>
-                        <a href="#" class="text-secondary font-bold hover:text-accent transition">اقرأ المزيد <i class="fas fa-arrow-left mr-2"></i></a>
+                        <h2 class="blog-title text-2xl font-bold text-primary mb-3 font-tajawal">أسرار تنظيف الحمام
+                            بلمعان</h2>
+                        <p class="blog-excerpt text-gray-600 mb-4">حمام نظيف ولامع في خطوات بسيطة. نصائح للقضاء على
+                            الجير والبقع الصعبة...</p>
+                        <a href="#" class="text-secondary font-bold hover:text-accent transition">اقرأ المزيد <i
+                                class="fas fa-arrow-left mr-2"></i></a>
                     </div>
                 </article>
-                
+
                 <!-- Post 6 -->
-                <article class="blog-post bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600&h=400&fit=crop" alt="النوافذ" class="w-full h-48 object-cover">
+                <article class="blog-post bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600&h=400&fit=crop"
+                        alt="النوافذ" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
                             <span><i class="far fa-calendar ml-1"></i>20 أكتوبر 2024</span>
                             <span><i class="far fa-clock ml-1"></i>3 دقائق</span>
                         </div>
-                        <h2 class="blog-title text-2xl font-bold text-primary mb-3 font-tajawal">كيف تنظف النوافذ بدون خطوط؟</h2>
-                        <p class="blog-excerpt text-gray-600 mb-4">احصل على نوافذ شفافة ولامعة بدون خطوط أو علامات. الطريقة الصحيحة...</p>
-                        <a href="#" class="text-secondary font-bold hover:text-accent transition">اقرأ المزيد <i class="fas fa-arrow-left mr-2"></i></a>
+                        <h2 class="blog-title text-2xl font-bold text-primary mb-3 font-tajawal">كيف تنظف النوافذ بدون
+                            خطوط؟</h2>
+                        <p class="blog-excerpt text-gray-600 mb-4">احصل على نوافذ شفافة ولامعة بدون خطوط أو علامات.
+                            الطريقة الصحيحة...</p>
+                        <a href="#" class="text-secondary font-bold hover:text-accent transition">اقرأ المزيد <i
+                                class="fas fa-arrow-left mr-2"></i></a>
                     </div>
                 </article>
             </div>
-            
+
             <!-- No Results Message -->
             <div id="no-results" class="hidden text-center py-12">
                 <i class="fas fa-search text-6xl text-gray-300 mb-4"></i>
@@ -167,22 +534,84 @@
             </div>
         </div>
     </section>
-    
-    <!-- CTA -->
-    <section class="py-20 bg-gradient-to-br from-primary via-secondary to-accent">
-        <div class="container mx-auto px-4 text-center text-white" data-aos="fade-up">
-            <h2 class="text-4xl font-bold mb-6 font-tajawal">هل تحتاج خدمات تنظيف احترافية؟</h2>
-            <p class="text-xl mb-8">نحن هنا لمساعدتك! احجز الآن واستمتع بنظافة مثالية</p>
-            <a href="booking.html" class="inline-block bg-white hover:bg-accent text-primary hover:text-white px-10 py-4 rounded-full text-lg font-bold transition transform hover:scale-105 shadow-2xl">
-                <i class="fas fa-calendar-check ml-2"></i>احجز موعدك
-            </a>
-        </div>
-    </section>
-    
+
+
+
+
     <!-- Footer -->
     <footer class="bg-dark text-white py-12">
-        <div class="container mx-auto px-4 text-center">
-            <p class="text-gray-400">&copy; 2024 Plaza Clean. جميع الحقوق محفوظة.</p>
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                     <!-- Logo -->
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <img src="./img/logo.png" class="w-16 h-16" alt="">
+                    <div>
+                        <h1 class="text-2xl font-bold text-primary font-tajawal">بلازا كلين</h1>
+                        <p class="text-xs text-secondary">نخلي أماكنك تبرق</p>
+                    </div>
+                </div>
+                    <p class="text-gray-400 leading-relaxed text-sm">
+                        شركتك الموثوقة للتنظيف الشامل في المدينة المنورة والمنطقة الشرقية.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-base font-bold mb-3 font-tajawal">روابط سريعة</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-secondary transition text-sm">الرئيسية</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-secondary transition text-sm">الخدمات</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-secondary transition text-sm">من نحن</a></li>
+                        <li><a href="pricing.html" class="text-gray-400 hover:text-secondary transition text-sm">الأسعار</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-secondary transition text-sm">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-base font-bold mb-3 font-tajawal">خدماتنا</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#carpet" class="text-gray-400 hover:text-secondary transition text-sm">تنظيف السجاد</a></li>
+                        <li><a href="#furniture" class="text-gray-400 hover:text-secondary transition text-sm">تنظيف الكنب</a></li>
+                        <li><a href="#sanitize" class="text-gray-400 hover:text-secondary transition text-sm">التعقيم والتطهير</a></li>
+                        <li><a href="#tanks" class="text-gray-400 hover:text-secondary transition text-sm">تنظيف الخزانات</a></li>
+                        <li><a href="#buildings" class="text-gray-400 hover:text-secondary transition text-sm">تنظيف المباني</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-base font-bold mb-3 font-tajawal">تواصل معنا</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-secondary text-sm ml-2"></i>
+                            <a href="tel:0132345678" class="text-gray-400 hover:text-secondary transition text-sm">013-234-5678</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-whatsapp text-secondary text-sm ml-2"></i>
+                            <a href="https://wa.me/966501234567" class="text-gray-400 hover:text-secondary transition text-sm">+966-50-123-4567</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-secondary text-sm ml-2"></i>
+                            <a href="mailto:info@plazaclean-dammam.sa" class="text-gray-400 hover:text-secondary transition text-sm">info@plazaclean-dammam.sa</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="flex space-x-3 space-x-reverse mt-4">
+                        <a href="#" class="w-8 h-8 bg-secondary hover:bg-accent rounded-full flex items-center justify-center transition transform hover:scale-110 text-xs">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 bg-secondary hover:bg-accent rounded-full flex items-center justify-center transition transform hover:scale-110 text-xs">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 bg-secondary hover:bg-accent rounded-full flex items-center justify-center transition transform hover:scale-110 text-xs">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 بلازا كلين. جميع الحقوق محفوظة.</p>
+            </div>
         </div>
     </footer>
     
@@ -190,8 +619,15 @@
     <a href="https://wa.me/966501234567" target="_blank" class="whatsapp-float" aria-label="تواصل عبر واتساب">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <!-- Call Floating Button -->
+<a href="tel:+966501234567" class="call-float" aria-label="اتصال مباشر">
+    <i class="fas fa-phone"></i>
+</a>
     
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>
