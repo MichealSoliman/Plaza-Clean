@@ -15,19 +15,20 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#1e3a5f',
-                        secondary: '#14b8a6',
+                        primary: '#3fa0d9',
+                        secondary: '#7db081',
                         accent: '#f59e0b',
                         dark: '#0f172a',
                     },
                     fontFamily: {
                         'cairo': ['Cairo', 'sans-serif'],
-                        'tajawal': ['Tajawal', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
+    
+
     <style>
         body { font-family: 'Cairo', sans-serif; }
         .hero-gradient { background: linear-gradient(135deg, rgba(30, 58, 95, 0.95) 0%, rgba(20, 184, 166, 0.85) 100%); }
@@ -35,6 +36,9 @@
         @keyframes pulse-glow {
             0%, 100% { box-shadow: 0 0 20px rgba(20, 184, 166, 0.5); }
             50% { box-shadow: 0 0 40px rgba(20, 184, 166, 0.8); }
+        }
+         .hero-gradient {
+            background: rgba(124, 175, 128, 0.6);
         }
         .whatsapp-float {
             position: fixed;
@@ -61,158 +65,427 @@
             70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
+         .call-float {
+            position: fixed;
+            bottom: 30px; 
+            right: 20px;
+            background-color: #3fa0d9; 
+            color: #fff;
+            font-size: 25px;
+            width: 55px;
+            height: 55px;
+            line-height: 55px;
+            text-align: center;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            z-index: 999;
+            transition: 0.3s ease;
+        }
+
+        .call-float:hover {
+            transform: scale(1.15);
+            background-color: #2d8bc7;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
     
-    <!-- Navbar (نفس النسق من الصفحات السابقة) -->
+      <!-- Navbar -->
     <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
+               <!-- Logo -->
                 <div class="flex items-center space-x-3 space-x-reverse">
-                    <div class="text-4xl">✨</div>
+                    <img src="./img/logo.png" class="w-16 h-16" alt="">
                     <div>
-                        <h1 class="text-2xl font-bold text-primary font-tajawal">Plaza Clean</h1>
+                        <h1 class="text-2xl font-bold text-primary font-tajawal">بلازا كلين</h1>
                         <p class="text-xs text-secondary">نخلي أماكنك تبرق</p>
                     </div>
                 </div>
+                
                 <ul class="hidden md:flex space-x-8 space-x-reverse font-tajawal">
                     <li><a href="index.html" class="text-gray-700 hover:text-secondary transition">الرئيسية</a></li>
-                    <li><a href="services.html" class="text-gray-700 hover:text-secondary transition">الخدمات</a></li>
-                    <li><a href="gallery.html" class="text-gray-700 hover:text-secondary transition">معرض الأعمال</a></li>
+                    <li><a href="services.html" class="text-gray-700 hover:text-secondary transition ">الخدمات</a></li>
+                    <li><a href="gallery.html" class="text-gray-700 hover:text-secondary transition ">معرض الأعمال</a></li>
                     <li><a href="about.html" class="text-primary hover:text-secondary transition font-semibold">من نحن</a></li>
-                    <li><a href="pricing.html" class="text-gray-700 hover:text-secondary transition">الأسعار</a></li>
                     <li><a href="blog.html" class="text-gray-700 hover:text-secondary transition">المدونة</a></li>
                     <li><a href="contact.html" class="text-gray-700 hover:text-secondary transition">اتصل بنا</a></li>
                 </ul>
-                <a href="booking.html" class="hidden md:block bg-secondary hover:bg-accent text-white px-6 py-3 rounded-full font-bold transition transform hover:scale-105 pulse-glow">احجز الآن</a>
-                <button id="mobile-menu-btn" class="md:hidden text-primary focus:outline-none"><i class="fas fa-bars text-2xl"></i></button>
+                
+                <a href="booking.html" class="hidden md:block bg-secondary hover:bg-accent text-white px-5 py-2 rounded-full font-bold transition transform hover:scale-105 pulse-glow text-sm">
+                    احجز الآن
+                </a>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-primary focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
             </div>
+            
             <div id="mobile-menu" class="hidden md:hidden pb-4">
                 <ul class="space-y-3 font-tajawal">
                     <li><a href="index.html" class="block text-gray-700 hover:text-secondary transition">الرئيسية</a></li>
-                    <li><a href="services.html" class="block text-gray-700 hover:text-secondary transition">الخدمات</a></li>
-                    <li><a href="gallery.html" class="block text-gray-700 hover:text-secondary transition">معرض الأعمال</a></li>
-                    <li><a href="about.html" class="block text-primary font-semibold hover:text-secondary transition">من نحن</a></li>
-                    <li><a href="pricing.html" class="block text-gray-700 hover:text-secondary transition">الأسعار</a></li>
-                    <li><a href="blog.html" class="block text-gray-700 hover:text-secondary transition">المدونة</a></li>
+                    <li><a href="services.html" class="block text-gray-700  hover:text-secondary transition">الخدمات</a></li>
+                    <li><a href="gallery.html" class="block text-gray-700 hover:text-secondary transition ">معرض الأعمال</a></li>
+                    <li><a href="about.html" class="block text-primary hover:text-secondary ">من نحن</a></li>
+                    <li><a href="blog.html" class="text-gray-700 hover:text-secondary transition">المدونة</a></li>
                     <li><a href="contact.html" class="block text-gray-700 hover:text-secondary transition">اتصل بنا</a></li>
-                    <li><a href="booking.html" class="block bg-secondary text-white px-6 py-3 rounded-full font-bold text-center">احجز الآن</a></li>
+                    <li><a href="booking.html" class="block bg-secondary text-white px-5 py-2 rounded-full font-bold text-center text-sm">احجز الآن</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     
-    <!-- Hero Section -->
-    <section class="relative h-96 flex items-center justify-center overflow-hidden mt-20">
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&h=600&fit=crop" alt="فريق Plaza Clean" class="w-full h-full object-cover">
-            <div class="absolute inset-0 hero-gradient"></div>
-        </div>
-        <div class="relative z-10 text-center text-white px-4" data-aos="fade-up">
-            <h1 class="text-5xl md:text-6xl font-bold mb-4 font-tajawal">من نحن؟</h1>
-            <p class="text-xl md:text-2xl">قصة نجاح في عالم النظافة</p>
-        </div>
-    </section>
+<!-- Hero Section -->
+<section class="relative h-[800px] flex items-center justify-center overflow-hidden mt-20 rounded-b-[100px] md:rounded-b-[200px]">
     
-    <!-- About Content -->
-    <section class="py-20">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="text-4xl font-bold text-primary mb-6 font-tajawal">Plaza Clean - رائدة التنظيف في الدمام</h2>
-                    <div class="w-24 h-1 bg-gradient-to-r from-secondary to-accent mx-auto mb-6"></div>
-                    <p class="text-xl text-gray-700 leading-relaxed">
-                        تأسست Plaza Clean في عام 2019 برؤية واضحة: توفير خدمات تنظيف استثنائية تحول المساحات إلى بيئات نظيفة ومريحة. منذ ذلك الحين، نمت لنصبح إحدى أبرز شركات التنظيف في الدمام والمنطقة الشرقية.
+    <!-- Background Video/Image -->
+    <div class="absolute inset-0 z-0">
+        <img src="./img/pexels-idilcelikler-34873909.jpg" alt="من نحن" class="w-full h-full object-cover">
+        <div class="absolute inset-0 hero-gradient"></div>
+    </div>
+    
+    <!-- Hero Content -->
+    <div class="relative z-10 text-center text-white px-4" data-aos="fade-up">
+        <div class="floating mb-6">
+            <i class="fas fa-users text-6xl text-accent"></i>
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 font-tajawal leading-tight">
+            من نحن <br>قصتنا ورحلتنا
+        </h1>
+
+        <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
+            نحن فريق متخصص نسعى دائمًا لتقديم أعلى مستوى من الجودة والخدمات بمعايير احترافية. 
+            رؤيتنا هي بناء ثقة طويلة المدى مع عملائنا من خلال العمل المتقن والاهتمام بالتفاصيل.
+        </p>
+
+        <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+            <a href="#about-details" class="bg-[#679fd6] text-white px-10 py-4 rounded-full text-lg font-bold transition transform hover:scale-105 shadow-2xl">
+                <i class="fas fa-eye ml-2"></i>
+                تعرف علينا
+            </a>
+            <a href="contact.html" class="bg-white hover:bg-gray-100 text-primary px-10 py-4 rounded-full text-lg font-bold transition transform hover:scale-105 shadow-2xl">
+                <i class="fas fa-envelope ml-2"></i>
+                تواصل معنا
+            </a>
+        </div>
+        
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-6 max-w-3xl mx-auto mt-16" data-aos="fade-up" data-aos-delay="200">
+            <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6">
+                <div class="text-4xl font-bold text-accent mb-2">+1000</div>
+                <div class="text-sm">عميل يثق بنا</div>
+            </div>
+            <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6">
+                <div class="text-4xl font-bold text-accent mb-2">+5</div>
+                <div class="text-sm">سنوات من العطاء</div>
+            </div>
+            <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6">
+                <div class="text-4xl font-bold text-accent mb-2">100%</div>
+                <div class="text-sm">التزام بالجودة</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <i class="fas fa-chevron-down text-white text-3xl"></i>
+    </div>
+</section>
+
+    
+<!-- About Content -->
+<section class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+            <!-- Main Header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="inline-block bg-primary text-white px-6 py-2 rounded-full text-sm font-bold mb-4 font-tajawal">
+                    منذ 2019
+                </span>
+                <h2 class="text-5xl font-bold text-primary mb-6 font-tajawal leading-tight">
+                    Plaza Clean - رائدة التنظيف في المدينة المنورة
+                </h2>
+                <div class="w-32 h-1 bg-gradient-to-r from-secondary to-accent mx-auto mb-8"></div>
+                <p class="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
+                    تأسست Plaza Clean في عام 2019 برؤية واضحة: توفير خدمات تنظيف استثنائية تحول المساحات إلى بيئات نظيفة ومريحة. منذ ذلك الحين، نمت لنصبح إحدى أبرز شركات التنظيف في المدينة المنورةوالمنطقة الشرقية، معتمدين على فريق محترف وتقنيات متطورة ومواد آمنة.
+                </p>
+            </div>
+            
+            <!-- Company Story -->
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-20" data-aos="fade-up">
+                <div>
+                    <h3 class="text-3xl font-bold text-primary mb-6 font-tajawal">قصة نجاحنا</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        بدأنا رحلتنا بمشروع صغير في المدينة المنورة، وبفضل ثقة عملائنا وتفاني فريقنا، توسعنا لنقدم خدماتنا في جميع أنحاء المنطقة الشرقية. نحن نفخر بأننا ساهمنا في تحسين جودة الحياة للآلاف من العائلات والشركات.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        اليوم، نمتلك أسطولاً من المركبات المجهزة بأحدث معدات التنظيف، وفريقاً مدرباً يخضع لدورات مستمرة لضمان تقديم خدمات تلبي أعلى المعايير العالمية.
                     </p>
                 </div>
-                
-                <!-- Vision & Mission -->
-                <div class="grid md:grid-cols-2 gap-8 mb-16" data-aos="fade-up">
-                    <div class="bg-gradient-to-br from-secondary to-accent text-white p-8 rounded-2xl shadow-xl">
-                        <div class="text-5xl mb-4">🎯</div>
-                        <h3 class="text-2xl font-bold mb-4 font-tajawal">رؤيتنا</h3>
-                        <p class="leading-relaxed">أن نكون الخيار الأول والأكثر موثوقية لخدمات التنظيف في المملكة، مع توسع مستمر يغطي جميع مدن المملكة ويقدم أعلى معايير الجودة والاحترافية.</p>
-                    </div>
-                    <div class="bg-gradient-to-br from-primary to-secondary text-white p-8 rounded-2xl shadow-xl">
-                        <div class="text-5xl mb-4">📋</div>
-                        <h3 class="text-2xl font-bold mb-4 font-tajawal">مهمتنا</h3>
-                        <p class="leading-relaxed">تقديم خدمات تنظيف عالية الجودة باستخدام أحدث التقنيات ومواد صديقة للبيئة، مع فريق مدرب ومحترف يضمن رضا عملائنا في كل مرة.</p>
-                    </div>
-                </div>
-                
-                <!-- Values -->
-                <div data-aos="fade-up" class="mb-16">
-                    <h3 class="text-3xl font-bold text-primary mb-8 text-center font-tajawal">قيمنا ومبادئنا</h3>
-                    <div class="grid md:grid-cols-3 gap-6">
-                        <div class="bg-white p-6 rounded-2xl shadow-lg text-center">
-                            <div class="text-4xl mb-4">⭐</div>
-                            <h4 class="text-xl font-bold text-primary mb-2 font-tajawal">الجودة</h4>
-                            <p class="text-gray-600">نلتزم بأعلى معايير الجودة في كل خدمة</p>
+                <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center p-6 bg-blue-50 rounded-xl">
+                            <div class="text-3xl font-bold text-primary mb-2">2019</div>
+                            <div class="text-sm text-gray-600">سنة التأسيس</div>
                         </div>
-                        <div class="bg-white p-6 rounded-2xl shadow-lg text-center">
-                            <div class="text-4xl mb-4">🤝</div>
-                            <h4 class="text-xl font-bold text-primary mb-2 font-tajawal">الأمانة</h4>
-                            <p class="text-gray-600">نحافظ على ثقة عملائنا وممتلكاتهم</p>
+                        <div class="text-center p-6 bg-green-50 rounded-xl">
+                            <div class="text-3xl font-bold text-secondary mb-2">25+</div>
+                            <div class="text-sm text-gray-600">فني محترف</div>
                         </div>
-                        <div class="bg-white p-6 rounded-2xl shadow-lg text-center">
-                            <div class="text-4xl mb-4">⚡</div>
-                            <h4 class="text-xl font-bold text-primary mb-2 font-tajawal">السرعة</h4>
-                            <p class="text-gray-600">نقدم خدماتنا بكفاءة واحترافية</p>
+                        <div class="text-center p-6 bg-amber-50 rounded-xl">
+                            <div class="text-3xl font-bold text-accent mb-2">15+</div>
+                            <div class="text-sm text-gray-600">مركبة مجهزة</div>
                         </div>
-                    </div>
-                </div>
-                
-                <!-- Stats -->
-                <div class="bg-gradient-to-br from-primary via-secondary to-accent text-white p-12 rounded-3xl shadow-2xl" data-aos="fade-up">
-                    <h3 class="text-3xl font-bold mb-8 text-center font-tajawal">إنجازاتنا بالأرقام</h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                        <div>
-                            <div class="text-5xl font-bold mb-2">+1250</div>
-                            <div class="text-lg">مشروع منجز</div>
-                        </div>
-                        <div>
-                            <div class="text-5xl font-bold mb-2">+980</div>
-                            <div class="text-lg">عميل سعيد</div>
-                        </div>
-                        <div>
-                            <div class="text-5xl font-bold mb-2">5+</div>
-                            <div class="text-lg">سنوات خبرة</div>
-                        </div>
-                        <div>
-                            <div class="text-5xl font-bold mb-2">100%</div>
-                            <div class="text-lg">رضا العملاء</div>
+                        <div class="text-center p-6 bg-purple-50 rounded-xl">
+                            <div class="text-3xl font-bold text-purple-600 mb-2">7</div>
+                            <div class="text-sm text-gray-600">أيام العمل</div>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <!-- Vision & Mission -->
+            <div class="grid lg:grid-cols-2 gap-8 mb-20" data-aos="fade-up">
+                <div class="bg-gradient-to-br from-primary to-blue-600 text-white p-10 rounded-2xl shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white bg-opacity-10 rounded-full -translate-y-16 translate-x-16"></div>
+                    <div class="absolute bottom-0 left-0 w-24 h-24 bg-white bg-opacity-10 rounded-full translate-y-12 -translate-x-12"></div>
+                    <div class="relative z-10">
+                        <div class="text-6xl mb-6">🎯</div>
+                        <h3 class="text-3xl font-bold mb-6 font-tajawal">رؤيتنا</h3>
+                        <p class="text-lg leading-relaxed opacity-95">
+                            أن نكون الخيار الأول والأكثر موثوقية لخدمات التنظيف في المملكة، مع توسع مستمر يغطي جميع مدن المملكة ويقدم أعلى معايير الجودة والاحترافية. نطمح لأن نصبح الرقم الصعب في صناعة التنظيف محلياً وإقليمياً.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-secondary to-green-600 text-white p-10 rounded-2xl shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-32 h-32 bg-white bg-opacity-10 rounded-full -translate-y-16 -translate-x-16"></div>
+                    <div class="absolute bottom-0 right-0 w-24 h-24 bg-white bg-opacity-10 rounded-full translate-y-12 translate-x-12"></div>
+                    <div class="relative z-10">
+                        <div class="text-6xl mb-6">📋</div>
+                        <h3 class="text-3xl font-bold mb-6 font-tajawal">مهمتنا</h3>
+                        <p class="text-lg leading-relaxed opacity-95">
+                            تقديم خدمات تنظيف عالية الجودة باستخدام أحدث التقنيات ومواد صديقة للبيئة، مع فريق مدرب ومحترف يضمن رضا عملائنا في كل مرة. نحن ملتزمون بتوفير بيئات نظيفة وصحية تعزز جودة الحياة والإنتاجية.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Values -->
+            <div data-aos="fade-up" class="mb-20">
+                <div class="text-center mb-12">
+                    <h3 class="text-4xl font-bold text-primary mb-4 font-tajawal">قيمنا ومبادئنا</h3>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">أسس نعمل بها ونتخذها دليلاً في كل خطوة نخطوها لخدمتكم</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg text-center hover-lift border border-gray-100">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 text-primary rounded-2xl text-2xl mb-4">
+                            ⭐
+                        </div>
+                        <h4 class="text-xl font-bold text-primary mb-3 font-tajawal">الجودة</h4>
+                        <p class="text-gray-600 leading-relaxed">نلتزم بأعلى معايير الجودة في كل خدمة نقدمها، ولا نقبل بأقل من التميز</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg text-center hover-lift border border-gray-100">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-green-100 text-secondary rounded-2xl text-2xl mb-4">
+                            🤝
+                        </div>
+                        <h4 class="text-xl font-bold text-primary mb-3 font-tajawal">الأمانة</h4>
+                        <p class="text-gray-600 leading-relaxed">نحافظ على ثقة عملائنا وممتلكاتهم، ونعامل كل منزل وكأنه منزلنا</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg text-center hover-lift border border-gray-100">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-amber-100 text-accent rounded-2xl text-2xl mb-4">
+                            ⚡
+                        </div>
+                        <h4 class="text-xl font-bold text-primary mb-3 font-tajawal">السرعة</h4>
+                        <p class="text-gray-600 leading-relaxed">نقدم خدماتنا بكفاءة واحترافية، مع الحفاظ على الدقة والجودة العالية</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg text-center hover-lift border border-gray-100">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-purple-100 text-purple-600 rounded-2xl text-2xl mb-4">
+                            🌱
+                        </div>
+                        <h4 class="text-xl font-bold text-primary mb-3 font-tajawal">الاستدامة</h4>
+                        <p class="text-gray-600 leading-relaxed">نستخدم مواد صديقة للبيئة ونساهم في الحفاظ على مواردنا الطبيعية</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Why Choose Us -->
+            <div class="mb-20" data-aos="fade-up">
+                <div class="text-center mb-12">
+                    <h3 class="text-4xl font-bold text-primary mb-4 font-tajawal">لماذا تختار Plaza Clean؟</h3>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">نقدم مزايا فريدة تجعلنا الخيار الأمثل لخدمات التنظيف</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="flex items-start space-x-4 space-x-reverse">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center text-lg">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-primary mb-2 font-tajawal">ضمان الجودة</h4>
+                            <p class="text-gray-600">جميع خدماتنا مضمونة بنسبة 100%، ونعيد الخدمة مجاناً إذا لم تكن راضياً</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4 space-x-reverse">
+                        <div class="flex-shrink-0 w-12 h-12 bg-secondary text-white rounded-xl flex items-center justify-center text-lg">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-primary mb-2 font-tajawal">مرونة المواعيد</h4>
+                            <p class="text-gray-600">نعمل 7 أيام في الأسبوع، مع إمكانية الحجز في أي وقت يناسبك</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4 space-x-reverse">
+                        <div class="flex-shrink-0 w-12 h-12 bg-accent text-white rounded-xl flex items-center justify-center text-lg">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-primary mb-2 font-tajawal">أحدث التقنيات</h4>
+                            <p class="text-gray-600">نستخدم أحدث معدات التنظيف والتقنيات المتطورة لضمان أفضل النتائج</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4 space-x-reverse">
+                        <div class="flex-shrink-0 w-12 h-12 bg-purple-500 text-white rounded-xl flex items-center justify-center text-lg">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-primary mb-2 font-tajawal">فريق محترف</h4>
+                            <p class="text-gray-600">فريقنا مدرب تدريباً عالياً ويخضع لدورات مستمرة لتحسين مهاراته</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4 space-x-reverse">
+                        <div class="flex-shrink-0 w-12 h-12 bg-green-500 text-white rounded-xl flex items-center justify-center text-lg">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-primary mb-2 font-tajawal">مواد آمنة</h4>
+                            <p class="text-gray-600">نستخدم مواد تنظيف صديقة للبيئة وآمنة على الأطفال والحيوانات الأليفة</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4 space-x-reverse">
+                        <div class="flex-shrink-0 w-12 h-12 bg-red-500 text-white rounded-xl flex items-center justify-center text-lg">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-primary mb-2 font-tajawal">دعم فوري</h4>
+                            <p class="text-gray-600">فريق الدعم متاح 24/7 للرد على استفساراتك وتلقي ملاحظاتك</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
         </div>
-    </section>
-    
-    <!-- CTA Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4 text-center" data-aos="fade-up">
-            <h2 class="text-4xl font-bold text-primary mb-6 font-tajawal">انضم إلى عائلة Plaza Clean</h2>
-            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">استمتع بخدماتنا الاحترافية واحصل على خصم 20% على أول زيارة!</p>
-            <a href="booking.html" class="inline-block bg-secondary hover:bg-accent text-white px-10 py-4 rounded-full text-lg font-bold transition transform hover:scale-105 shadow-2xl">
+    </div>
+</section>
+
+
+
+<!-- CTA Section -->
+<section class="py-20 bg-gradient-to-br from-primary to-secondary relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-full opacity-10">
+        <div class="absolute top-10 right-10 w-32 h-32 bg-white rounded-full"></div>
+        <div class="absolute bottom-10 left-10 w-24 h-24 bg-white rounded-full"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-white rounded-full"></div>
+    </div>
+    <div class="container mx-auto px-4 text-center relative z-10" data-aos="fade-up">
+        <h2 class="text-4xl font-bold text-white mb-6 font-tajawal">انضم إلى عائلة Plaza Clean</h2>
+        <p class="text-xl text-white opacity-90 mb-8 max-w-2xl mx-auto">استمتع بخدماتنا الاحترافية واحصل على خصم 20% على أول زيارة!</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="booking.html" class="inline-flex items-center bg-white hover:bg-gray-100 text-primary px-10 py-4 rounded-full text-lg font-bold transition transform hover:scale-105 shadow-2xl">
                 <i class="fas fa-calendar-check ml-2"></i> احجز الآن
             </a>
+            <a href="contact.html" class="inline-flex items-center bg-accent hover:bg-amber-600 text-white px-10 py-4 rounded-full text-lg font-bold transition transform hover:scale-105 shadow-2xl">
+                <i class="fas fa-phone ml-2"></i> اتصل بنا
+            </a>
         </div>
-    </section>
+        <p class="text-white opacity-80 mt-6 text-sm">عرض الخصم ساري لفترة محدودة، استفد منه الآن!</p>
+    </div>
+</section>
+
+<style>
+    .hover-lift {
+        transition: all 0.3s ease;
+    }
+    
+    .hover-lift:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+</style>
     
     <!-- Footer -->
     <footer class="bg-dark text-white py-12">
         <div class="container mx-auto px-4">
-            <div class="text-center">
-                <div class="flex items-center justify-center space-x-3 space-x-reverse mb-4">
-                    <div class="text-3xl">✨</div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                     <!-- Logo -->
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <img src="./img/logo.png" class="w-16 h-16" alt="">
                     <div>
-                        <h3 class="text-xl font-bold font-tajawal">Plaza Clean</h3>
-                        <p class="text-sm text-secondary">نخلي أماكنك تبرق</p>
+                        <h1 class="text-2xl font-bold text-primary font-tajawal">بلازا كلين</h1>
+                        <p class="text-xs text-secondary">نخلي أماكنك تبرق</p>
                     </div>
                 </div>
-                <p class="text-gray-400 mb-4">شركتك الموثوقة للتنظيف الشامل في الدمام والمنطقة الشرقية</p>
-                <p class="text-gray-400 text-sm">&copy; 2024 Plaza Clean. جميع الحقوق محفوظة.</p>
+                    <p class="text-gray-400 leading-relaxed text-sm">
+                        شركتك الموثوقة للتنظيف الشامل في الدمام والمنطقة الشرقية.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-base font-bold mb-3 font-tajawal">روابط سريعة</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-secondary transition text-sm">الرئيسية</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-secondary transition text-sm">الخدمات</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-secondary transition text-sm">من نحن</a></li>
+                        <li><a href="pricing.html" class="text-gray-400 hover:text-secondary transition text-sm">الأسعار</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-secondary transition text-sm">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-base font-bold mb-3 font-tajawal">خدماتنا</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#carpet" class="text-gray-400 hover:text-secondary transition text-sm">تنظيف السجاد</a></li>
+                        <li><a href="#furniture" class="text-gray-400 hover:text-secondary transition text-sm">تنظيف الكنب</a></li>
+                        <li><a href="#sanitize" class="text-gray-400 hover:text-secondary transition text-sm">التعقيم والتطهير</a></li>
+                        <li><a href="#tanks" class="text-gray-400 hover:text-secondary transition text-sm">تنظيف الخزانات</a></li>
+                        <li><a href="#buildings" class="text-gray-400 hover:text-secondary transition text-sm">تنظيف المباني</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-base font-bold mb-3 font-tajawal">تواصل معنا</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-secondary text-sm ml-2"></i>
+                            <a href="tel:0132345678" class="text-gray-400 hover:text-secondary transition text-sm">013-234-5678</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-whatsapp text-secondary text-sm ml-2"></i>
+                            <a href="https://wa.me/966501234567" class="text-gray-400 hover:text-secondary transition text-sm">+966-50-123-4567</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-secondary text-sm ml-2"></i>
+                            <a href="mailto:info@plazaclean-dammam.sa" class="text-gray-400 hover:text-secondary transition text-sm">info@plazaclean-dammam.sa</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="flex space-x-3 space-x-reverse mt-4">
+                        <a href="#" class="w-8 h-8 bg-secondary hover:bg-accent rounded-full flex items-center justify-center transition transform hover:scale-110 text-xs">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 bg-secondary hover:bg-accent rounded-full flex items-center justify-center transition transform hover:scale-110 text-xs">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 bg-secondary hover:bg-accent rounded-full flex items-center justify-center transition transform hover:scale-110 text-xs">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 بلازا كلين. جميع الحقوق محفوظة.</p>
             </div>
         </div>
     </footer>
@@ -221,6 +494,11 @@
     <a href="https://wa.me/966501234567" target="_blank" class="whatsapp-float" aria-label="تواصل عبر واتساب">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <!-- Call Floating Button -->
+<a href="tel:+966501234567" class="call-float" aria-label="اتصال مباشر">
+    <i class="fas fa-phone"></i>
+</a>
     
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
